@@ -1389,7 +1389,7 @@ hidden: true
       <div class="backing-preference">
         <div class="preference-label">Simulatable Scope:</div>
         <div class="preference-qualities">
-          <div class="quality-option">Diseases</div>
+          <div class="quality-option">Intelligence</div>
           <div class="quality-option active">Treatments</div>
           <div class="quality-option">Consciousness</div>
         </div>
@@ -1416,8 +1416,8 @@ hidden: true
     
     <!-- Step 2 content (Right side) -->
     <div class="timeline-item right">
-      <div class="step-number">Step 2: <span class="step-highlight">Make History</span></div>
-      <div class="step-description">Proving the capacity for digital drug-like pertubation will give way to new forms of simulation medicine.</div>
+      <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
+      <div class="step-description">Upload the first vertebrate as the initial milestome, and create digital drug-like simulations on it.</div>
     </div>
     
     <!-- Step 3 content (Left side) -->
@@ -1444,7 +1444,7 @@ hidden: true
   <div class="funding-container" id="funding-container">
     <canvas class="neural-canvas" id="neural-canvas"></canvas>
     <div class="funding-content">
-      <h2 class="funding-title">Interested In Funding Us?</h2>
+      <h2 class="funding-title">Interested In Talking To Us?</h2>
       <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
