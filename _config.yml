@@ -1,0 +1,59 @@
+title: "Gleb's Neo Cortex"
+author: "Gleb Razgar"
+description: "Matter forms; telos defines"
+
+# Email / Social media user names used by the minima theme:
+email: "gleb.studios@[GMAIL].[COM]"
+twitter_username: "gleb_razgar"
+github_username: "ProjectGleb"
+linkedin_username: "gleb-razgar-6931a7220"
+
+#########################################################################################
+######### Nothing below needs to be changed (unless you know what you're doing) #########
+#########################################################################################
+theme: "minima"
+
+# rss: rss
+permalink: /:title/
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter_opts:
+    disable: true
+    
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+collections:
+  research:
+    output: true
+    permalink: /:title/
+  duality:
+    output: true
+    permalink: /Duality/:title/
+  duality-research:
+    output: true
+    permalink: /Duality/research/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      tags: Other
+  - scope:
+      path: ""
+    values:
+      mathjax: true
+  - scope:
+      path: "images"
+    values:
+      image: true
+
+include:
+  - "images"
+  - "*.gif"

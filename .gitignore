@@ -1,0 +1,20 @@
+﻿# Jekyll specific
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby specific
+vendor/
+.bundle/
+Gemfile.lock
+Gemfile 2.lock
+Gemfile
+
+# OS specific
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
