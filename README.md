@@ -1,1 +1,2 @@
-GlebRazgar.github.io
+Duality-os.github.io
+
