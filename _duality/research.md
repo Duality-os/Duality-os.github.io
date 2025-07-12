@@ -1,7 +1,7 @@
 ---
 title: "Duality Research"
 layout: post
-permalink: /Duality/research/
+permalink: /research/
 hidden: true
 ---
 
