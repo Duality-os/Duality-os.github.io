@@ -1,7 +1,7 @@
 ---
 title: "Duality"
 layout: post
-permalink: /Duality/
+permalink: /
 hidden: true
 ---
 <!-- URL of the post: https://duality.nexus/ -->
