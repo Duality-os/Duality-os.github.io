@@ -5,7 +5,7 @@ permalink: /Duality/research/
 hidden: true
 ---
 
-<!-- URL of the post: https://glebrazgar.github.io/Duality/research/ -->
+<!-- URL of the post: https://duality.nexus/research/ -->
 
 <!-- STYLING THE PAGE -->
 <style>
@@ -397,9 +397,9 @@ hidden: true
 
 <!-- Navigation buttons -->
 <div class="nav-buttons">
-  <button class="nav-button" onclick="window.location.href='https://glebrazgar.github.io/Duality/'">Home</button>
-  <!-- <button class="nav-button" onclick="window.location.href='https://glebrazgar.github.io/Duality/team/'">Team</button> -->
-  <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://glebrazgar.github.io/Duality/research/'">Research</button>
+  <button class="nav-button" onclick="window.location.href='https://duality.nexus/'">Home</button>
+  <!-- <button class="nav-button" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
+  <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
 </div>
 
 <!-- Spacer div that forces content down -->
@@ -433,8 +433,8 @@ hidden: true
     <div class="footer-tagline">Bending mind-space</div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/gleb-razgar-6931a7220" class="footer-link">LinkedIn</a>
-      <a href="https://glebrazgar.github.io/Duality-Contact/" class="footer-link">Contact</a>
-      <a href="https://glebrazgar.github.io/Duality-Research/" class="footer-link">Research</a>
+      <a href="https://duality.nexus/contact/" class="footer-link">Contact</a>
+      <a href="https://duality.nexus/research/" class="footer-link">Research</a>
     </div>
     <div class="footer-copyright">© 2025 Duality. All rights reserved.</div>
   </div>

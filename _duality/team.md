@@ -3,7 +3,7 @@ title: "Team"
 layout: post
 hidden: true
 ---
-<!-- URL of the post: https://glebrazgar.github.io/Duality/team/ -->
+<!-- URL of the post: https://duality.nexus/team/ -->
 
 <!-- STYLING THE PAGE -->
 
@@ -483,9 +483,9 @@ hidden: true
 
 <!-- Navigation buttons -->
 <div class="nav-buttons">
-  <button class="nav-button" onclick="window.location.href='https://glebrazgar.github.io/Duality/'">Home</button>
-  <!-- <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://glebrazgar.github.io/Duality/team/'">Team</button> -->
-  <button class="nav-button" onclick="window.location.href='https://glebrazgar.github.io/Duality/research/'">Research</button>
+  <button class="nav-button" onclick="window.location.href='https://duality.nexus/'">Home</button>
+  <!-- <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
+  <button class="nav-button" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
 </div>
 
 <!-- Main Header -->
@@ -555,7 +555,7 @@ hidden: true
         <p>We're always looking for exceptional talent to help us push the boundaries of whole brain emulation.</p>
         <p>If you're passionate about understanding or digitizing the human brain, we'd love to hear from you.</p>
       </div>
-      <button id="funding-button" class="contact-button" onclick="window.location.href='https://glebrazgar.github.io/Duality/contact/'">Get in Touch</button>
+      <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
 </div>
@@ -570,8 +570,8 @@ hidden: true
     <div class="footer-tagline">Bending mind-space</div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/gleb-razgar-6931a7220" class="footer-link">LinkedIn</a>
-      <a href="https://glebrazgar.github.io/Duality/contact/" class="footer-link">Contact</a>
-      <a href="https://glebrazgar.github.io/Duality/research/" class="footer-link">Research</a>
+      <a href="https://duality.nexus/contact/" class="footer-link">Contact</a>
+      <a href="https://duality.nexus/research/" class="footer-link">Research</a>
     </div>
     <div class="footer-copyright">© 2025 Duality. All rights reserved.</div>
   </div>
