@@ -1417,13 +1417,13 @@ hidden: true
     <!-- Step 2 content (Right side) -->
     <div class="timeline-item right">
       <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
-      <div class="step-description">Upload the first vertebrate, and test digital drug-like simulations on it.</div>
+      <div class="step-description">Upload the first vertebrate and develop digital drug-like simulations on it.</div>
     </div>
     
     <!-- Step 3 content (Left side) -->
     <div class="timeline-item left">
       <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
-      <div class="step-description">Scale our technology platform and licence it to companies and labs.
+      <div class="step-description">Scale our technology platform and licence it to companies, labs, and pharmasuticles.
       </div>
     </div>
     
@@ -1906,7 +1906,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           // Calculate appropriate speed for 2.5 seconds
-          const targetFrames = 240 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 440 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (closestDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           // Create the particle with its assigned target
@@ -1985,7 +1985,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           const travelDistance = closestDistance;
-          const targetFrames = 140 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 440 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (travelDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           result.push({
