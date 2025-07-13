@@ -1326,7 +1326,7 @@ hidden: true
       <div class="section-title"><span style="color: #5ED464;">Mission</span></div>
     </div>
     <div class="section-content">
-      <p>Humanity doesnt know how the brain works — and thus can't cure, enhance, or replicate it.</p>
+      <p>Humanity doesnt know how the brain works — and thus can't cure, enhance, or imitate it.</p>
 
       <p>We aim to solve this by creating whole brain uploads. Beginning by simulating small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
     </div>
