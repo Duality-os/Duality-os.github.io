@@ -1,6 +1,6 @@
 ---
 title: "Team"
-layout: duality-posts
+layout: post
 hidden: true
 ---
 <!-- URL of the post: https://duality.nexus/team/ -->

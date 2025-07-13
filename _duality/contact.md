@@ -1,6 +1,6 @@
 ---
 title: "Contact Duality"
-layout: duality-posts
+layout: post
 hidden: true
 ---
 

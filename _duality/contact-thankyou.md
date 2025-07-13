@@ -1,6 +1,6 @@
 ---
 title: "Contact Duality Thankyou"
-layout: duality-posts
+layout: post
 hidden: false
 ---
 

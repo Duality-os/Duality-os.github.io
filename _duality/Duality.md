@@ -1,6 +1,6 @@
 ---
 title: "Duality"
-layout: duality-posts
+layout: post
 permalink: /
 hidden: true
 ---
