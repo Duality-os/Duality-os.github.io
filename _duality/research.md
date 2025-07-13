@@ -393,6 +393,12 @@ hidden: true
       font-size: 0.9rem;
     }
   }
+  
+  /* Fix for potential scrollbar issues */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 </style>
 
 <!-- Navigation buttons -->
