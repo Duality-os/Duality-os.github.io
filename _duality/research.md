@@ -324,7 +324,7 @@ hidden: true
     }
     
     .nav-buttons {
-      right: 5%;
+      right: 10%;
       gap: 15px;
     }
   }
@@ -385,7 +385,7 @@ hidden: true
     
     .nav-buttons {
       top: 10px;
-      right: 10px;
+      right: 10%;
       gap: 10px;
     }
     
