@@ -1906,7 +1906,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           // Calculate appropriate speed for 2.5 seconds
-          const targetFrames = 440 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 400 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (closestDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           // Create the particle with its assigned target
@@ -1985,7 +1985,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           const travelDistance = closestDistance;
-          const targetFrames = 440 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 400 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (travelDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           result.push({
