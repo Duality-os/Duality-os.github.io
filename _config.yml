@@ -38,7 +38,7 @@ collections:
     permalink: /:title/
   duality-research:
     output: true
-    permalink: /:title/
+    permalink: /research/:title/
 defaults:
   - scope:
       path: ""
