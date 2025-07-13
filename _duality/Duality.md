@@ -408,6 +408,13 @@ hidden: true
       padding: 20px;
     }
   }
+
+  /* Additional mobile breakpoint for smaller phones */
+  @media (max-width: 480px) {
+    .nav-buttons {
+      gap: 10px;
+    }
+  }
   
   /* Add word-wrap to all text containers */
   .section-content, .centered-content, .motivation-text, .footer-content {
