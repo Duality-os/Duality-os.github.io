@@ -1417,7 +1417,7 @@ hidden: true
     <!-- Step 2 content (Right side) -->
     <div class="timeline-item right">
       <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
-      <div class="step-description">Upload the first vertebrate as the initial milestome, and create digital drug-like simulations on it.</div>
+      <div class="step-description">Upload the first vertebrate, and test digital drug-like simulations on it.</div>
     </div>
     
     <!-- Step 3 content (Left side) -->
@@ -1906,7 +1906,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           // Calculate appropriate speed for 2.5 seconds
-          const targetFrames = 140 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 240 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (closestDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           // Create the particle with its assigned target
