@@ -1423,7 +1423,7 @@ hidden: true
     <!-- Step 3 content (Left side) -->
     <div class="timeline-item left">
       <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
-      <div class="step-description">Scale our technology platform and licence it to companies, labs, and pharmasuticles.
+      <div class="step-description">Scale our technology platform and licence it to companies, labs, and drug discovery firms.
       </div>
     </div>
     
