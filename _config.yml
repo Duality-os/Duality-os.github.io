@@ -1,12 +1,12 @@
-title: "Gleb's Neo Cortex"
-author: "Gleb Razgar"
-description: "Matter forms; telos defines"
+title: "Accelerating brain uploading"
+# author: "Gleb Razgar"
+# description: "Matter forms; telos defines"
 
 # Email / Social media user names used by the minima theme:
-email: "gleb.studios@[GMAIL].[COM]"
-twitter_username: "gleb_razgar"
-github_username: "ProjectGleb"
-linkedin_username: "gleb-razgar-6931a7220"
+# email: "gleb.studios@[GMAIL].[COM]"
+# twitter_username: "gleb_razgar"
+# github_username: "ProjectGleb"
+# linkedin_username: "gleb-razgar-6931a7220"
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
@@ -30,9 +30,9 @@ titles_from_headings:
   collections: true
 
 collections:
-  research:
-    output: true
-    permalink: /:title/
+  # research:
+  #   output: true
+  #   permalink: /:title/
   duality:
     output: true
     permalink: /:title/
