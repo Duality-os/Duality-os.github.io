@@ -1985,7 +1985,7 @@ document.addEventListener('DOMContentLoaded', function() {
           availableTargets[closestIndex].taken = true;
           
           const travelDistance = closestDistance;
-          const targetFrames = 400 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
+          const targetFrames = 340 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
           const calculatedSpeed = (travelDistance / targetFrames) + 0.4; // Adjusted minimum speed
           
           result.push({
