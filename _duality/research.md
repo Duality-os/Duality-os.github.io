@@ -1,6 +1,6 @@
 ---
 title: "Duality Research"
-layout: post
+layout: duality-posts
 permalink: /research/
 hidden: true
 ---
