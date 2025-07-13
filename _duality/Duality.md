@@ -336,6 +336,7 @@ hidden: true
     .nav-buttons {
       top: 10px;
       right: 10%; /* Adjusted for mobile */
+      gap: 15px;
     }
     
     .nav-button {
