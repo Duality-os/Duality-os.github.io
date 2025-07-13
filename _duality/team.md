@@ -476,12 +476,6 @@ hidden: true
   .name-part {
     color: #5ED464; /* Green color */
   }
-  
-  /* Fix for potential scrollbar issues */
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-  }
 </style>
 
 <!-- Ensure proper viewport setting -->

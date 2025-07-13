@@ -1452,7 +1452,7 @@ hidden: true
   <div class="funding-container" id="funding-container">
     <canvas class="neural-canvas" id="neural-canvas"></canvas>
     <div class="funding-content">
-      <h2 class="funding-title">Join Our $1M Pre-Seed Raise</h2>
+      <h2 class="funding-title">Join our $1M Pre-seed round</h2>
       <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
