@@ -569,7 +569,7 @@ hidden: true
     <div class="footer-logo">Duality</div>
     <div class="footer-tagline">Bending mind-space</div>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/gleb-razgar-6931a7220" class="footer-link">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/brain-duality/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BVmgZIyf4Q8%2BzlYPJgth1pw%3D%3D" class="footer-link">LinkedIn</a>
       <a href="https://duality.nexus/contact/" class="footer-link">Contact</a>
       <a href="https://duality.nexus/research/" class="footer-link">Research</a>
     </div>

@@ -210,9 +210,9 @@ hidden: true
   </form>
   
   <div style="text-align: center; margin-top: 40px; color: #999; margin-bottom: 40px;">
-    <p>Or email one of us directly at: <a href="mailto:gleb.studios@gmail.com" style="color: #5ED464;">gleb.studios@gmail.com</a></p>
+    <!-- <p>Or email one of us directly at: <a href="mailto:gleb.studios@gmail.com" style="color: #5ED464;">gleb.studios@gmail.com</a></p> -->
   </div>
   
-  <!-- Add green divider if desired -->
+  Add green divider if desired
   <div class="section-divider"></div>
 </div>

@@ -1328,7 +1328,7 @@ hidden: true
     <div class="section-content">
       <p>Humanity doesnt know how the brain works — and thus can't cure, enhance, or imitate it.</p>
 
-      <p>We aim to solve this by creating whole brain uploads. Beginning by simulating small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
+      <p>We are workign on solving this by creating whole brain simulations. Beginning by uploading small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
     </div>
   </div>
 </div>
@@ -1423,7 +1423,7 @@ hidden: true
     <!-- Step 3 content (Left side) -->
     <div class="timeline-item left">
       <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
-      <div class="step-description">Scale our technology platform and licence it to companies, labs, and drug discovery firms.
+      <div class="step-description">Scale our technology platform and licence it to companies, labs, and drug discovery firms as the first proof of concept.
       </div>
     </div>
     
@@ -1459,7 +1459,7 @@ hidden: true
     <div class="footer-logo">Duality</div>
     <div class="footer-tagline">Bending mind-space</div>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/gleb-razgar-6931a7220" class="footer-link">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/brain-duality/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BVmgZIyf4Q8%2BzlYPJgth1pw%3D%3D" class="footer-link">LinkedIn</a>
       <a href="https://duality.nexus/contact/" class="footer-link">Contact</a>
       <a href="https://duality.nexus/research" class="footer-link">Research</a>
     </div>
