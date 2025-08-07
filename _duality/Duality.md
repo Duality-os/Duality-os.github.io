@@ -1425,13 +1425,13 @@ hidden: true
     <!-- Step 2 content (Right side) -->
     <div class="timeline-item right">
       <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
-      <div class="step-description">Upload the first vertebrate and develop digital drug-like simulations on it.</div>
+      <div class="step-description">Upload zebra-fish and develop digital drug-like simulations on it.</div>
     </div>
     
     <!-- Step 3 content (Left side) -->
     <div class="timeline-item left">
       <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
-      <div class="step-description">Scale our technology platform and licence it to companies, labs, and drug discovery firms as the first proof of concept.
+      <div class="step-description">Scale our technology to mice and humans and licence it to companies, labs, and drug discovery firms as the first proof of concept.
       </div>
     </div>
     
