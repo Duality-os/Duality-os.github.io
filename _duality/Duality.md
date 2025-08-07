@@ -1334,7 +1334,7 @@ hidden: true
       <div class="section-title"><span style="color: #5ED464;">Mission</span></div>
     </div>
     <div class="section-content">
-      <p>Humanity doesnt know how the brain works — and thus can't cure, enhance, or imitate it.</p>
+      <p>Humanity doesnt know how the brain works; and thus can't cure, enhance, or imitate it.</p>
 
       <p>We are workign on solving this by creating whole brain simulations. Beginning by uploading small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
     </div>
@@ -1354,7 +1354,7 @@ hidden: true
       </div>
       <div class="backing-title">Scan</div>
       <div class="backing-text">
-        To create a digital replica of the brain, we image it at nanometer resolution - capturing structural features down to a synapse. 
+        To create a digital replica of the brain, we image it at nanometer resolution, capturing structural features down to a synapse. 
       </div>
       <div class="backing-preference">
         <div class="preference-label">Level of resolution:</div>

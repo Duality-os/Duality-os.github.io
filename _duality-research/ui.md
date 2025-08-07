@@ -16,7 +16,7 @@ Before late, virtual humans may be born.
 
 Though Darwin never imagined life going digital, uploaded minds are coming online. Neuroscientists recently digitized several tiny brains (more on each later), and are now inching towards uploading humans.
 
-The world with even approximate human brain "uploads" looks strikingly better than today's, and thus worth seriously entertaining. Year-long brain medication trials might get compressed to day-long virtual runs. Neurodegenerative diseases might undergo in-silico treatment. And neuron-level simulation access might reveal the mechanism of intelligence -- easing the development of aligned AI. I’ll be the first to admit: brain uploading is double-edged -- philosophically, economically and existentially -- but the upside is too consequential to ignore.
+The world with even approximate human brain "uploads" looks strikingly better than today's, and thus worth seriously entertaining. Year-long brain medication trials might get compressed to day-long virtual runs. Neurodegenerative diseases might undergo in-silico treatment. And neuron-level simulation access might reveal the mechanism of intelligence, easing the development of aligned AI. I’ll be the first to admit: brain uploading is double-edged; philosophically, economically and existentially, but the upside is too consequential to ignore.
 
 In light of such a possible future, this piece tries to provide a holistic overview of the current brain uploading research, its methods, milestones, and future directions.
 
@@ -494,7 +494,7 @@ To witness human emulations within the next decade three key disciplines need "u
 </div>
 
 Considering that software, hardware and wetwear sectors are accelerating nonlinearly, it is probable that each of those innovations will be reached this very decade. 
-The first uploaded intelligence effort will likely cost \$1-\$10 billion — prohibitive for most — but like the human genome project which plummeted from \$3 billion to \$400, it should come as no surprise that brain uploads too will likely drop in price by orders of magnitude within a few years after the first upload. I hope you are excited. 
+The first uploaded intelligence effort will likely cost \$1-\$10 billion, prohibitive for most, but like the human genome project which plummeted from 3 billion to 400 dollars, it should come as no surprise that brain uploads too will likely drop in price by orders of magnitude within a few years after the first upload. I hope you are excited. 
 
 
 <h3 align="center">5. Conclusion </h3>
