@@ -1322,7 +1322,7 @@ hidden: true
   <canvas id="title-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></canvas>
   
   <!-- Subtitle slogan - now visible from the start -->
-  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #5ED464; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Biophysical brain emulation</h2>
+  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #5ED464; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Brain-drug emulation</h2>
 </div>
 
 <hr class="section-divider">
@@ -1335,8 +1335,8 @@ hidden: true
     </div>
     <div class="section-content">
       <p>Drug development is un-fathomably slow and complex due to neccessity for animal testing.</p>
-
-      <p>We are developing brain simulations so that in-silico drug trials can be run millions at a time, and at a fraction of the cost, helping big-pharma make drugs affordable again. Beginning by uploading small organisms we are enabling in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
+      <p>We are developing brain simulations so that in-silico drug trials can be run millions at a time, and at a fraction of the cost, helping big-pharma make drugs affordable again.</p>
+      <p>Beginning by uploading small organisms we are enabling in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
     </div>
   </div>
 </div>
@@ -1452,7 +1452,7 @@ hidden: true
   <div class="funding-container" id="funding-container">
     <canvas class="neural-canvas" id="neural-canvas"></canvas>
     <div class="funding-content">
-      <h2 class="funding-title">Accelerate pre-clinical testing</h2>
+      <h2 class="funding-title">Fast-Track Drug Development</h2>
       <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
