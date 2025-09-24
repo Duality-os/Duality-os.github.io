@@ -1322,7 +1322,7 @@ hidden: true
   <canvas id="title-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></canvas>
   
   <!-- Subtitle slogan - now visible from the start -->
-  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #5ED464; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Biophysical brain emulation</h2>
+  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #5ED464; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Accelerating brain uploading</h2>
 </div>
 
 <hr class="section-divider">
@@ -1334,9 +1334,9 @@ hidden: true
       <div class="section-title"><span style="color: #5ED464;">Mission</span></div>
     </div>
     <div class="section-content">
-      <p>Drug development is un-fathomably slow and complex due to neccessity for animal testing.</p>
+      <p>Humanity doesnt know how the brain works; and thus can't cure, enhance, or imitate it.</p>
 
-      <p>We are developing brain simulations so that in-silico drug trials can be run millions at a time, and at a fraction of the cost, helping big-pharma make drugs affordable again. Beginning by uploading small organisms we are enabling in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
+      <p>We are workign on solving this by creating whole brain simulations. Beginning by uploading small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
     </div>
   </div>
 </div>
@@ -1392,7 +1392,7 @@ hidden: true
       </div>
       <div class="backing-title">Simulate</div>
       <div class="backing-text">
-        Lastly, we simulate the brain in different environments; testing drugs in a digital replica of the animal intelligence of the uploaded mind.
+        Lastly, we aim to simulate the brain in different environments; testing drugs, intelligence, and conciouseness of the uploaded mind.
       </div>
       <div class="backing-preference">
         <div class="preference-label">Simulatable Scope:</div>
@@ -1410,7 +1410,7 @@ hidden: true
 
 <!-- Process/Roadmap Section with completely restructured HTML -->
 <div class="centered-section process-section">
-  <div class="centered-title">Your Drug Development Pipeline</div>
+  <div class="centered-title">Our Roadmap</div>
   
   <div class="process-timeline-container">
     <!-- The vertical timeline line -->
@@ -1418,20 +1418,20 @@ hidden: true
     
     <!-- Step 1 content (Left side) -->
     <div class="timeline-item left">
-      <div class="step-number">Phase 1: <span class="step-highlight">Reduce Pre-Clinical Costs</span></div>
-      <div class="step-description">Replace 70% of animal testing with digital brain simulations. Cut pre-clinical timelines from 6 years to 18 months while improving candidate success rates.</div>
+      <div class="step-number">Step 1: <span class="step-highlight">Raise Funds</span></div>
+      <div class="step-description">We are raising $1M pre-seed with the aim of uploading the first vertibrate.</div>
     </div>
     
     <!-- Step 2 content (Right side) -->
     <div class="timeline-item right">
-      <div class="step-number">Phase 2: <span class="step-highlight">Predict Clinical Outcomes</span></div>
-      <div class="step-description">Test thousands of compounds simultaneously on digital brain models. Identify off-target effects and optimize dosing before human trials.</div>
+      <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
+      <div class="step-description">Upload zebra-fish and develop digital drug-like simulations on it.</div>
     </div>
     
     <!-- Step 3 content (Left side) -->
     <div class="timeline-item left">
-      <div class="step-number">Phase 3: <span class="step-highlight">Accelerate Time-to-Market</span></div>
-      <div class="step-description">Scale from neurological disorders to psychiatry and oncology. Deliver regulatory-grade evidence packages that de-risk billion-dollar clinical programs.
+      <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
+      <div class="step-description">Scale our technology to mice and humans and licence it to companies, labs, and drug discovery firms as the first proof of concept.
       </div>
     </div>
     
@@ -1452,7 +1452,7 @@ hidden: true
   <div class="funding-container" id="funding-container">
     <canvas class="neural-canvas" id="neural-canvas"></canvas>
     <div class="funding-content">
-      <h2 class="funding-title">Accelerate pre-clinical testing</h2>
+      <h2 class="funding-title">Join our $1M Pre-seed round</h2>
       <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
