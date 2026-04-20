@@ -2,6 +2,7 @@
 title: "Team"
 layout: post
 hidden: true
+published: false
 ---
 <!-- URL of the post: https://duality.nexus/team/ -->
 
