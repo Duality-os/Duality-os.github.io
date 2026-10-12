@@ -24,13 +24,13 @@ hidden: true
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh; /* Use viewport height */
-    background-color: black !important; /* Keep background black for overscroll */
+    background-color: #F5EFE7 !important; /* Keep background beige for overscroll */
     max-width: 100vw; /* Limit to viewport width */
     box-sizing: border-box; /* Include padding in width calculation */
   }
   
   body {
-    background-color: black !important;
+    background-color: #F5EFE7 !important;
     color: white !important;
     max-width: 100vw !important; /* Use viewport width */
     width: 100% !important;
@@ -101,7 +101,7 @@ hidden: true
   }
   
   .post-content {
-    background-color: black;
+    background-color: #F5EFE7;
     color: white;
     padding: 20px 0; /* Vertical padding only */
     border-radius: 8px;
@@ -143,26 +143,26 @@ hidden: true
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: underline;
-    text-decoration-color: #5ED464;
+    text-decoration-color: #4A90E2;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
   }
   
   .nav-button:hover {
-    color: #5ED464;
+    color: #4A90E2;
   }
   
   /* Horizontal divider */
   .section-divider {
     border: none;
     height: 1px;
-    background: linear-gradient(to right, 
-                               rgba(94, 212, 100, 0.05), 
-                               rgba(94, 212, 100, 0.3) 20%, 
-                               rgba(94, 212, 100, 0.8) 40%, 
-                               rgba(94, 212, 100, 0.8) 60%, 
-                               rgba(94, 212, 100, 0.3) 80%, 
-                               rgba(94, 212, 100, 0.05));
+    background: linear-gradient(to right,
+                               rgba(74, 144, 226, 0.05),
+                               rgba(74, 144, 226, 0.3) 20%,
+                               rgba(74, 144, 226, 0.8) 40%,
+                               rgba(74, 144, 226, 0.8) 60%,
+                               rgba(74, 144, 226, 0.3) 80%,
+                               rgba(74, 144, 226, 0.05));
     width: 100vw;
     margin: 40px -50vw;
     left: 50%;
@@ -425,7 +425,7 @@ hidden: true
   
   /* Custom footer styling with black background */
   .custom-footer {
-    background-color: black !important; /* Pure black background */
+    background-color: #F5EFE7 !important; /* Pure beige background */
     color: white; /* Text is white for contrast */
     padding: 30px 0;
     margin: 0 !important; /* Remove ALL margins */
@@ -447,7 +447,7 @@ hidden: true
     left: 0;
     width: 100%;
     height: 1000px; /* Tall enough to cover any space */
-    background-color: black; /* Match footer color - pure black */
+    background-color: #F5EFE7; /* Match footer color - pure beige */
     z-index: 5; /* Below footer content but above other elements */
   }
   
@@ -524,7 +524,7 @@ hidden: true
   }
   
   .contact-button:hover {
-    background-color: #5ED464; /* Green instead of blue */
+    background-color: #4A90E2; /* Blue */
     color: white;
   }
   
@@ -546,7 +546,7 @@ hidden: true
   }
   
   .backing-box {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(74, 144, 226, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 30px;
@@ -556,18 +556,18 @@ hidden: true
     flex-direction: column;
     min-height: 400px;
     transform: translateY(0); /* Initial position */
-    box-shadow: 0 0 0 rgba(94, 212, 100, 0); /* Initial shadow */
+    box-shadow: 0 0 0 rgba(229, 117, 80, 0); /* Initial shadow */
     position: relative;
   }
   
   .backing-box:hover {
-    border-color: #5ED464;
-    box-shadow: 0 15px 30px rgba(94, 212, 100, 0.2); /* Enhanced shadow for depth */
+    border-color: #4A90E2;
+    box-shadow: 0 15px 30px rgba(74, 144, 226, 0.2); /* Enhanced shadow for depth */
     transform: translateY(-10px); /* Lift up by 10px on hover */
   }
   
   .backing-icon {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(74, 144, 226, 0.1);
     width: 60px;
     height: 60px;
     border-radius: 10px;
@@ -585,7 +585,7 @@ hidden: true
   }
   
   .backing-box:hover .backing-title {
-    color: #5ED464;
+    color: #4A90E2;
   }
   
   .backing-text {
@@ -629,7 +629,7 @@ hidden: true
   
   .scale-fill {
     height: 100%;
-    background-color: #5ED464;
+    background-color: #4A90E2;
     border-radius: 2px;
   }
   
@@ -648,7 +648,7 @@ hidden: true
   }
   
   .quality-option.active {
-    background-color: #5ED464;
+    background-color: #4A90E2;
     color: black;
   }
   
@@ -813,7 +813,7 @@ hidden: true
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #09150A; /* Solid color equivalent of rgba(94, 212, 100, 0.1) against black */
+    background-color: rgba(74, 144, 226, 0.1); /* Blue background for step icons */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -853,9 +853,9 @@ hidden: true
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #5ED464;
+    color: #4A90E2;
   }
-  
+
   .step-highlight {
     color: white;
   }
@@ -886,7 +886,7 @@ hidden: true
   }
   
   .cta-highlight {
-    color: #5ED464;
+    color: #4A90E2;
   }
   
   .process-cta-description {
@@ -919,7 +919,7 @@ hidden: true
   }
   
   .process-cta-button.primary:hover {
-    background-color: #5ED464;
+    background-color: #4A90E2;
     color: white;
   }
   
@@ -930,8 +930,8 @@ hidden: true
   }
   
   .process-cta-button.secondary:hover {
-    border-color: #5ED464;
-    color: #5ED464;
+    border-color: #4A90E2;
+    color: #4A90E2;
   }
   
   .process-deadline {
@@ -942,7 +942,7 @@ hidden: true
   
   /* Update SVG fill color in all steps */
   .timeline-item svg {
-    fill: #5ED464; /* Changed to green */
+    fill: #4A90E2; /* Changed to blue */
   }
   
   /* Further improved dynamic glow effect for backing boxes */
@@ -956,7 +956,7 @@ hidden: true
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(94, 212, 100, 0.15) 0%, rgba(94, 212, 100, 0.03) 60%, rgba(94, 212, 100, 0) 80%);
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, rgba(74, 144, 226, 0.03) 60%, rgba(74, 144, 226, 0) 80%);
     pointer-events: none;
     z-index: 0;
     transform: translate(-50%, -50%);
@@ -970,8 +970,8 @@ hidden: true
   /* Funding section with brain pixels effect */
   .funding-container {
     position: relative;
-    background-color: rgba(94, 212, 100, 0.1);
-    border: 1px solid rgba(94, 212, 100, 0.2);
+    background-color: rgba(74, 144, 226, 0.1);
+    border: 1px solid rgba(74, 144, 226, 0.2);
     border-radius: 20px;
     padding: 50px 40px;
     margin: 120px auto 49px auto;
@@ -1016,7 +1016,7 @@ hidden: true
   }
   
   .funding-container:hover {
-    box-shadow: 0 0 30px rgba(94, 212, 100, 0.1);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.1);
   }
   
   .funding-title {
@@ -1033,7 +1033,7 @@ hidden: true
   }
   
   .funding-highlight {
-    color: #5ED464;
+    color: #4A90E2;
   }
   
   /* Canvas element for brain pixels effect */
@@ -1053,9 +1053,9 @@ hidden: true
     z-index: 1;
   }
   
-  /* Green mission section specific styling */
+  /* Blue mission section specific styling */
   .mission-section {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(74, 144, 226, 0.1);
     padding: 50px 0; /* Increased from 40px to 70px for more vertical space */
     width: 100vw; /* Full viewport width */
     margin: 0 -50vw; /* Negative margin to extend full width */
@@ -1131,7 +1131,7 @@ hidden: true
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #5ED464;
+    color: #e57550;
   }
   
   /* Responsive adjustments for larger titles */
@@ -1154,7 +1154,7 @@ hidden: true
   /* Add a style for header subtitle to increase its size */
   .header-subtitle {
     font-family: Helvetica, Arial, sans-serif;
-    color: #5ED464;
+    color: #e57550;
     position: absolute;
     width: 100%;
     bottom: 30px;
@@ -1176,13 +1176,13 @@ hidden: true
   
   /* Custom text selection color */
   ::selection {
-    background-color: rgba(94, 212, 100, 0.3); /* #5ED464 at 25% opacity */
+    background-color: rgba(74, 144, 226, 0.3); /* #4A90E2 at 30% opacity */
     color: #ffffff; /* White text instead of black */
   }
   
   /* For Firefox */
   ::-moz-selection {
-    background-color: rgba(94, 212, 100, 0.3); /* #5ED464 at 25% opacity */
+    background-color: rgba(74, 144, 226, 0.3); /* #4A90E2 at 30% opacity */
     color: #ffffff; /* White text instead of black */
   }
   
@@ -1304,7 +1304,7 @@ hidden: true
 
 <!-- Navigation buttons -->
 <div class="nav-buttons">
-  <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://duality.nexus/'">Home</button>
+  <button class="nav-button" style="color: #4A90E2;" onclick="window.location.href='https://duality.nexus/'">Home</button>
   <!-- <button class="nav-button" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
   <button class="nav-button" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
 </div>
@@ -1322,7 +1322,7 @@ hidden: true
   <canvas id="title-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></canvas>
   
   <!-- Subtitle slogan - now visible from the start -->
-  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #5ED464; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Accelerating brain uploading</h2>
+  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #4A90E2; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Creating the most detailed brain maps</h2>
 </div>
 
 <hr class="section-divider">
@@ -1331,12 +1331,12 @@ hidden: true
 <div class="mission-section">
   <div class="mission-content">
     <div class="section-title-container">
-      <div class="section-title"><span style="color: #5ED464;">Mission</span></div>
+      <div class="section-title"><span style="color: #4A90E2;">Mission</span></div>
     </div>
     <div class="section-content">
-      <p>Humanity doesnt know how the brain works; and thus can't cure, enhance, or imitate it.</p>
+      <p>Humanity doesn't know how the brain works; and thus can't cure, enhance, or imitate it.</p>
 
-      <p>We are workign on solving this by creating whole brain simulations. Beginning by uploading small organisms we aim to enable in silico drug development, brain disease treatment, and production of the first "Uploaded Intelligence".</p>
+      <p>We are solving this by creating the most detailed brain maps and using them for brain simulation and diagnosis. Beginning with small organisms, we aim to enable in silico drug development and breakthrough treatments for brain diseases.</p>
     </div>
   </div>
 </div>
@@ -1350,7 +1350,7 @@ hidden: true
   <div class="backing-boxes">
     <div class="backing-box">
       <div class="backing-icon">
-        <img src="/images/micro.svg" width="96" height="96" alt="Microscope icon" style="fill: #5ED464;">
+        <img src="/images/micro.svg" width="96" height="96" alt="Microscope icon" style="fill: #4A90E2;">
       </div>
       <div class="backing-title">Scan</div>
       <div class="backing-text">
@@ -1369,7 +1369,7 @@ hidden: true
     
     <div class="backing-box">
       <div class="backing-icon">
-        <img src="/images/brain.svg" width="96" height="96" alt="Brain icon" style="fill: #5ED464;">
+        <img src="/images/brain.svg" width="96" height="96" alt="Brain icon" style="fill: #4A90E2;">
       </div>
       <div class="backing-title">Digitize</div>
       <div class="backing-text">
@@ -1388,7 +1388,7 @@ hidden: true
     
     <div class="backing-box">
       <div class="backing-icon">
-        <img src="/images/brain-net.svg" width="96" height="96" alt="Neural network icon" style="fill: #5ED464;">
+        <img src="/images/brain-net.svg" width="96" height="96" alt="Neural network icon" style="fill: #4A90E2;">
       </div>
       <div class="backing-title">Simulate</div>
       <div class="backing-text">
@@ -1419,7 +1419,7 @@ hidden: true
     <!-- Step 1 content (Left side) -->
     <div class="timeline-item left">
       <div class="step-number">Step 1: <span class="step-highlight">Raise Funds</span></div>
-      <div class="step-description">We are raising $1M pre-seed with the aim of uploading the first vertibrate.</div>
+      <div class="step-description">We are building advanced brain mapping technologies to create the most detailed neural reconstructions.</div>
     </div>
     
     <!-- Step 2 content (Right side) -->
@@ -1437,22 +1437,22 @@ hidden: true
     
     <!-- Icons positioned absolutely with more specific styling -->
     <div class="step-icon step-icon-1">
-      <img src="/images/dollar.svg" width="75" height="75" alt="Dollar icon" style="fill: #5ED464; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
+      <img src="/images/dollar.svg" width="75" height="75" alt="Dollar icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
     </div>
     
     <div class="step-icon step-icon-2">
-      <img src="/images/idea.svg" width="75" height="75" alt="Idea icon" style="fill: #5ED464; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
+      <img src="/images/idea.svg" width="75" height="75" alt="Idea icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
     </div>
     
     <div class="step-icon step-icon-3">
-      <img src="/images/rocket.svg" width="75" height="75" alt="Rocket icon" style="fill: #5ED464; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
+      <img src="/images/rocket.svg" width="75" height="75" alt="Rocket icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
     </div>
   </div>
   
   <div class="funding-container" id="funding-container">
     <canvas class="neural-canvas" id="neural-canvas"></canvas>
     <div class="funding-content">
-      <h2 class="funding-title">Join our $1M Pre-seed round</h2>
+      <h2 class="funding-title">Get in Touch</h2>
       <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
     </div>
   </div>
@@ -1515,13 +1515,13 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonCenterY = (buttonRect.top + buttonRect.bottom) / 2 - containerRect.top;
   });
   
-  // Define multiple shades of green
-  const greenShades = [
-    '#5ED464', // Base green
-    '#4AC050', // Darker
-    '#70DE76', // Lighter
-    '#32A838', // Much darker
-    '#8AE78F'  // Much lighter
+  // Define multiple shades of blue
+  const blueShades = [
+    '#4A90E2', // Base blue
+    '#3A7BC8', // Darker blue
+    '#5BA3FF', // Lighter blue
+    '#2A6BAE', // Much darker blue
+    '#6BB5FF'  // Much lighter blue
   ];
   
   // Pixel class
@@ -1552,7 +1552,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       this.life = 120 + Math.random() * 80;
-      this.color = greenShades[Math.floor(Math.random() * greenShades.length)];
+      this.color = blueShades[Math.floor(Math.random() * blueShades.length)];
       this.alpha = fromButton ? 0 : 1; // Start invisible if from button
     }
     
@@ -1630,7 +1630,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (distance < 80) {
           const alpha = Math.min(pixels[i].alpha, pixels[j].alpha) * (1 - distance / 80);
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(94, 212, 100, ${alpha * 0.5})`;
+          ctx.strokeStyle = `rgba(74, 144, 226, ${alpha * 0.5})`;
           ctx.lineWidth = 0.5;
           ctx.moveTo(pixels[i].x, pixels[i].y);
           ctx.lineTo(pixels[j].x, pixels[j].y);
@@ -1711,15 +1711,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let canvasWidth, canvasHeight;
     let aspectRatio = 0; // Store the aspect ratio of the text
     
-    // Use only green colors with slight variations for depth
+    // Use only blue colors with slight variations for depth
     const colors = [
-      '#5ED464', // Base green - primary color
-      '#5ED464', // Used multiple times to increase probability
-      '#5ED464',
-      '#5ED464',
-      '#5ED464',
-      '#5AD060', // Very slight variations
-      '#62D868'
+      '#4A90E2', // Base blue - primary color
+      '#4A90E2', // Used multiple times to increase probability
+      '#4A90E2',
+      '#4A90E2',
+      '#4A90E2',
+      '#3A7BC8', // Darker blue variation
+      '#5BA3FF'  // Lighter blue variation
     ];
     
     function init() {
@@ -1820,7 +1820,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Render text on canvas to get pixel data
       ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      ctx.fillStyle = '#5ED464'; // Set text to exact green
+      ctx.fillStyle = '#4A90E2'; // Set text to exact blue
       ctx.fillText(titleText, textX, textY);
       
       // Get the pixel data
