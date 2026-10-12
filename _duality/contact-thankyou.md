@@ -20,13 +20,13 @@ hidden: false
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     max-width: 100vw;
     box-sizing: border-box;
   }
   
   body {
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     color: white !important;
     max-width: 100vw !important;
     width: 100% !important;
@@ -63,12 +63,12 @@ hidden: false
     font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif !important;
     line-height: 1.4;
     white-space: nowrap;
-    color: #5ED464;
+    color: #e57550;
     font-weight: bold;
   }
 
   .home-button {
-    background-color: #5ED464;
+    background-color: #e57550;
     color: black !important;
     border: none;
     padding: 12px 30px;

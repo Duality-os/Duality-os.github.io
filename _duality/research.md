@@ -24,13 +24,13 @@ hidden: true
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     max-width: 100vw;
     box-sizing: border-box;
   }
   
   body {
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     color: white !important;
     max-width: 100vw !important;
     width: 100% !important;
@@ -76,13 +76,13 @@ hidden: true
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: underline;
-    text-decoration-color: #5ED464;
+    text-decoration-color: #e57550;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
   }
   
   .nav-button:hover {
-    color: #5ED464;
+    color: #e57550;
   }
   
   /* Section divider */
@@ -90,12 +90,12 @@ hidden: true
     border: none;
     height: 1px;
     background: linear-gradient(to right, 
-                               rgba(94, 212, 100, 0.05), 
-                               rgba(94, 212, 100, 0.3) 20%, 
-                               rgba(94, 212, 100, 0.8) 40%, 
-                               rgba(94, 212, 100, 0.8) 60%, 
-                               rgba(94, 212, 100, 0.3) 80%, 
-                               rgba(94, 212, 100, 0.05));
+                               rgba(229, 117, 80, 0.05), 
+                               rgba(229, 117, 80, 0.3) 20%, 
+                               rgba(229, 117, 80, 0.8) 40%, 
+                               rgba(229, 117, 80, 0.8) 60%, 
+                               rgba(229, 117, 80, 0.3) 80%, 
+                               rgba(229, 117, 80, 0.05));
     width: 100%;
     margin: 40px 0 20px;
     position: relative;
@@ -115,7 +115,7 @@ hidden: true
     font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif;
     font-size: 4.8rem;
     font-weight: bold;
-    color: #5ED464;
+    color: #e57550;
     text-align: center;
     margin-top: 0;
     margin-bottom: 40px;
@@ -137,11 +137,11 @@ hidden: true
     margin-bottom: 30px;
     border-radius: 8px;
     padding: 0;
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(229, 117, 80, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: 0 0 0 rgba(94, 212, 100, 0); /* Initial no shadow */
+    box-shadow: 0 0 0 rgba(229, 117, 80, 0); /* Initial no shadow */
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -149,8 +149,8 @@ hidden: true
   
   .research-item:hover {
     transform: translateY(-5px); /* Lift up when hovered */
-    border: 1px solid #5ED464; /* Green border on hover */
-    box-shadow: 0 10px 20px rgba(94, 212, 100, 0.2); /* Green glow that follows box shape */
+    border: 1px solid #e57550; /* Green border on hover */
+    box-shadow: 0 10px 20px rgba(229, 117, 80, 0.2); /* Green glow that follows box shape */
   }
   
   .research-link {
@@ -172,7 +172,7 @@ hidden: true
   }
   
   .research-link:hover {
-    color: #5ED464;
+    color: #e57550;
   }
   
   .research-date {
@@ -192,7 +192,7 @@ hidden: true
   }
   
   .research-item:hover .research-excerpt {
-    color: #5ED464;
+    color: #e57550;
   }
   
   .research-excerpt {
@@ -203,7 +203,7 @@ hidden: true
   }
   
   .custom-footer {
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     color: white;
     padding: 30px 0;
     margin: 0 !important;
@@ -224,7 +224,7 @@ hidden: true
     left: 0;
     width: 100%;
     height: 1000px;
-    background-color: black;
+    background-color: #f8d8c3;
     z-index: 5;
   }
   
@@ -405,7 +405,7 @@ hidden: true
 <div class="nav-buttons">
   <button class="nav-button" onclick="window.location.href='https://duality.nexus/'">Home</button>
   <!-- <button class="nav-button" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
-  <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
+  <button class="nav-button" style="color: #e57550;" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
 </div>
 
 <!-- Spacer div that forces content down -->
@@ -413,7 +413,7 @@ hidden: true
 
 <!-- Research content -->
 <div class="research-container" style="position: relative !important; padding-top: 20px !important;">
-  <h1 class="research-title" style="margin-top: 0; color: #5ED464; font-size: 4.8rem;">Research</h1>
+  <h1 class="research-title" style="margin-top: 0; color: #e57550; font-size: 4.8rem;">Research</h1>
   
   <ul class="research-list">
     {% assign sorted_research = site.duality-research | sort: 'date' | reverse %}

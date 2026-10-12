@@ -24,13 +24,13 @@ hidden: true
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh; /* Use viewport height */
-    background-color: #F5EFE7 !important; /* Keep background beige for overscroll */
+    background-color: #EDD5C0 !important; /* Keep background beige for overscroll */
     max-width: 100vw; /* Limit to viewport width */
     box-sizing: border-box; /* Include padding in width calculation */
   }
   
   body {
-    background-color: #F5EFE7 !important;
+    background-color: #EDD5C0 !important;
     color: white !important;
     max-width: 100vw !important; /* Use viewport width */
     width: 100% !important;
@@ -101,7 +101,7 @@ hidden: true
   }
   
   .post-content {
-    background-color: #F5EFE7;
+    background-color: #EDD5C0;
     color: white;
     padding: 20px 0; /* Vertical padding only */
     border-radius: 8px;
@@ -425,7 +425,7 @@ hidden: true
   
   /* Custom footer styling with black background */
   .custom-footer {
-    background-color: #F5EFE7 !important; /* Pure beige background */
+    background-color: #EDD5C0 !important; /* Pure beige background */
     color: white; /* Text is white for contrast */
     padding: 30px 0;
     margin: 0 !important; /* Remove ALL margins */
@@ -447,7 +447,7 @@ hidden: true
     left: 0;
     width: 100%;
     height: 1000px; /* Tall enough to cover any space */
-    background-color: #F5EFE7; /* Match footer color - pure beige */
+    background-color: #EDD5C0; /* Match footer color - pure beige */
     z-index: 5; /* Below footer content but above other elements */
   }
   
@@ -575,6 +575,10 @@ hidden: true
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+  }
+
+  .backing-icon img {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(95%);
   }
   
   .backing-title {
@@ -821,6 +825,10 @@ hidden: true
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .step-icon img {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(95%);
   }
   
   .step-icon-1 {
@@ -1322,7 +1330,7 @@ hidden: true
   <canvas id="title-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></canvas>
   
   <!-- Subtitle slogan - now visible from the start -->
-  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #4A90E2; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 2rem;">Creating the most detailed brain maps</h2>
+  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #4A90E2; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 1.4rem;">Creating the most detailed brain maps</h2>
 </div>
 
 <hr class="section-divider">

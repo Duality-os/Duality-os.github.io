@@ -24,13 +24,13 @@ published: false
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh; /* Use viewport height */
-    background-color: black !important; /* Keep background black for overscroll */
+    background-color: #f8d8c3 !important; /* Keep background black for overscroll */
     max-width: 100vw; /* Limit to viewport width */
     box-sizing: border-box; /* Include padding in width calculation */
   }
   
   body {
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     color: white !important;
     max-width: 100vw !important; /* Use viewport width */
     width: 100% !important;
@@ -101,7 +101,7 @@ published: false
   }
   
   .post-content {
-    background-color: black;
+    background-color: #f8d8c3;
     color: white;
     padding: 20px 0; /* Vertical padding only */
     border-radius: 8px;
@@ -143,13 +143,13 @@ published: false
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: underline;
-    text-decoration-color: #5ED464;
+    text-decoration-color: #e57550;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
   }
   
   .nav-button:hover {
-    color: #5ED464;
+    color: #e57550;
   }
   
   /* Horizontal divider */
@@ -157,12 +157,12 @@ published: false
     border: none;
     height: 1px;
     background: linear-gradient(to right, 
-                               rgba(94, 212, 100, 0.05), 
-                               rgba(94, 212, 100, 0.3) 20%, 
-                               rgba(94, 212, 100, 0.8) 40%, 
-                               rgba(94, 212, 100, 0.8) 60%, 
-                               rgba(94, 212, 100, 0.3) 80%, 
-                               rgba(94, 212, 100, 0.05));
+                               rgba(229, 117, 80, 0.05), 
+                               rgba(229, 117, 80, 0.3) 20%, 
+                               rgba(229, 117, 80, 0.8) 40%, 
+                               rgba(229, 117, 80, 0.8) 60%, 
+                               rgba(229, 117, 80, 0.3) 80%, 
+                               rgba(229, 117, 80, 0.05));
     width: 100vw;
     margin: 40px -50vw;
     left: 50%;
@@ -227,7 +227,7 @@ published: false
   }
   
   .team-box {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(229, 117, 80, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 25px;
@@ -238,19 +238,19 @@ published: false
     flex-direction: column;
     min-height: 320px; /* Reduced from 400px */
     transform: translateY(0); /* Initial position */
-    box-shadow: 0 0 0 rgba(94, 212, 100, 0); /* Initial shadow */
+    box-shadow: 0 0 0 rgba(229, 117, 80, 0); /* Initial shadow */
     position: relative;
     margin-bottom: 30px;
   }
   
   .team-box:hover {
-    border-color: #5ED464;
-    box-shadow: 0 15px 30px rgba(94, 212, 100, 0.2); /* Enhanced shadow for depth */
+    border-color: #e57550;
+    box-shadow: 0 15px 30px rgba(229, 117, 80, 0.2); /* Enhanced shadow for depth */
     transform: translateY(-10px); /* Lift up by 10px on hover */
   }
   
   .team-avatar {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(229, 117, 80, 0.1);
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -277,7 +277,7 @@ published: false
   
   .team-title {
     font-size: 1.1rem;
-    color: white; /* Changed from #5ED464 to white */
+    color: white; /* Changed from #e57550 to white */
     margin-bottom: 15px;
   }
   
@@ -288,7 +288,7 @@ published: false
   
   /* Ensure name-part stays green on hover */
   .team-box:hover .name-part {
-    color: #5ED464; /* Keep the name part green on hover */
+    color: #e57550; /* Keep the name part green on hover */
   }
   
   .team-bio {
@@ -321,12 +321,12 @@ published: false
     border-radius: 4px;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(94, 212, 100, 0.15);
+    background-color: rgba(229, 117, 80, 0.15);
   }
   
   /* Custom footer styling with black background */
   .custom-footer {
-    background-color: black !important; /* Pure black background */
+    background-color: #f8d8c3 !important; /* Pure black background */
     color: white; /* Text is white for contrast */
     padding: 30px 0;
     margin: 0 !important; /* Remove ALL margins */
@@ -348,7 +348,7 @@ published: false
     left: 0;
     width: 100%;
     height: 1000px; /* Tall enough to cover any space */
-    background-color: black; /* Match footer color - pure black */
+    background-color: #f8d8c3; /* Match footer color - pure black */
     z-index: 5; /* Below footer content but above other elements */
   }
   
@@ -434,13 +434,13 @@ published: false
   
   /* Custom text selection color */
   ::selection {
-    background-color: rgba(94, 212, 100, 0.3); /* #5ED464 at 25% opacity */
+    background-color: rgba(229, 117, 80, 0.3); /* #e57550 at 25% opacity */
     color: #ffffff; /* White text instead of black */
   }
   
   /* For Firefox */
   ::-moz-selection {
-    background-color: rgba(94, 212, 100, 0.3); /* #5ED464 at 25% opacity */
+    background-color: rgba(229, 117, 80, 0.3); /* #e57550 at 25% opacity */
     color: #ffffff; /* White text instead of black */
   }
   
@@ -463,7 +463,7 @@ published: false
   }
   
   .contact-button:hover {
-    background-color: #5ED464;
+    background-color: #e57550;
     color: white;
   }
   
@@ -475,7 +475,7 @@ published: false
   
   /* Style for name part */
   .name-part {
-    color: #5ED464; /* Green color */
+    color: #e57550; /* Green color */
   }
 </style>
 
@@ -485,13 +485,13 @@ published: false
 <!-- Navigation buttons -->
 <div class="nav-buttons">
   <button class="nav-button" onclick="window.location.href='https://duality.nexus/'">Home</button>
-  <!-- <button class="nav-button" style="color: #5ED464;" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
+  <!-- <button class="nav-button" style="color: #e57550;" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
   <button class="nav-button" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
 </div>
 
 <!-- Main Header -->
 <div class="header-title-container" style="text-align: center; margin-top: 100px; margin-bottom: 20px; position: relative; height: 120px;">
-  <h1 class="centered-title" style="margin-top: 0; color: #5ED464; font-size: 4.8rem;">Our Team</h1>
+  <h1 class="centered-title" style="margin-top: 0; color: #e57550; font-size: 4.8rem;">Our Team</h1>
 </div>
 
 <!-- Team Members Section -->

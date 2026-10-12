@@ -20,13 +20,13 @@ hidden: true
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     max-width: 100vw;
     box-sizing: border-box;
   }
   
   body {
-    background-color: black !important;
+    background-color: #f8d8c3 !important;
     color: white !important;
     max-width: 100vw !important;
     width: 100% !important;
@@ -57,13 +57,13 @@ hidden: true
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: underline;
-    text-decoration-color: #5ED464;
+    text-decoration-color: #e57550;
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
   }
   
   .nav-button:hover {
-    color: #5ED464;
+    color: #e57550;
   }
 
   .contact-container {
@@ -77,16 +77,16 @@ hidden: true
     text-align: center;
     margin-bottom: 20px;
     font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif !important;
-    color: #5ED464;
+    color: #e57550;
     font-weight: bold;
   }
 
   .contact-form {
-    background-color: rgba(94, 212, 100, 0.1);
+    background-color: rgba(229, 117, 80, 0.1);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #5ED464;
-    box-shadow: 0 0 20px rgba(94, 212, 100, 0.1);
+    border: 1px solid #e57550;
+    box-shadow: 0 0 20px rgba(229, 117, 80, 0.1);
   }
 
   .form-group {
@@ -103,7 +103,7 @@ hidden: true
   .form-group textarea {
     width: 100%;
     padding: 10px;
-    background-color: rgba(94, 212, 100, 0.05);
+    background-color: rgba(229, 117, 80, 0.05);
     color: white;
     border: 1px solid rgba(180, 180, 180, 0.4);
     border-radius: 4px;
@@ -112,14 +112,14 @@ hidden: true
 
   .form-group input:focus,
   .form-group textarea:focus {
-    border-color: #5ED464;
-    background-color: rgba(94, 212, 100, 0.1);
+    border-color: #e57550;
+    background-color: rgba(229, 117, 80, 0.1);
     outline: none;
-    box-shadow: 0 0 5px rgba(94, 212, 100, 0.3);
+    box-shadow: 0 0 5px rgba(229, 117, 80, 0.3);
   }
 
   .submit-button {
-    background-color: #5ED464;
+    background-color: #e57550;
     color: black;
     border: none;
     padding: 12px 20px;
@@ -168,12 +168,12 @@ hidden: true
     border: none;
     height: 1px;
     background: linear-gradient(to right, 
-                               rgba(94, 212, 100, 0.05), 
-                               rgba(94, 212, 100, 0.3) 20%, 
-                               rgba(94, 212, 100, 0.8) 40%, 
-                               rgba(94, 212, 100, 0.8) 60%, 
-                               rgba(94, 212, 100, 0.3) 80%, 
-                               rgba(94, 212, 100, 0.05));
+                               rgba(229, 117, 80, 0.05), 
+                               rgba(229, 117, 80, 0.3) 20%, 
+                               rgba(229, 117, 80, 0.8) 40%, 
+                               rgba(229, 117, 80, 0.8) 60%, 
+                               rgba(229, 117, 80, 0.3) 80%, 
+                               rgba(229, 117, 80, 0.05));
     width: 100%;
     margin: 40px 0 20px;
     position: relative;
@@ -210,7 +210,7 @@ hidden: true
   </form>
   
   <div style="text-align: center; margin-top: 40px; color: #999; margin-bottom: 40px;">
-    <!-- <p>Or email one of us directly at: <a href="mailto:gleb.studios@gmail.com" style="color: #5ED464;">gleb.studios@gmail.com</a></p> -->
+    <!-- <p>Or email one of us directly at: <a href="mailto:gleb.studios@gmail.com" style="color: #e57550;">gleb.studios@gmail.com</a></p> -->
   </div>
   
   <!-- Add green divider if desired -->

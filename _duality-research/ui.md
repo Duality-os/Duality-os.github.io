@@ -52,7 +52,7 @@ Now let's jump from the overview to specifics!
 <br>
 <div style="position: relative; text-align: center;">
   <hr style="border-top: 1px solid black; margin: 0;">
-  <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: black; margin: 0; padding: 0 10px; color: #5ED464;"><em>Technical rabbit hole ahead—feel free to bypass</em></p>
+  <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f8d8c3; margin: 0; padding: 0 10px; color: #e57550;"><em>Technical rabbit hole ahead—feel free to bypass</em></p>
 </div>
 <br>
 
@@ -98,127 +98,127 @@ Macroscale connectomes are typically mapped using diffusion-weighted magnetic re
 Once you have the brain imaging data, the next step is to turn it into a functioning model. Though there isn't a definitive solution to converting data into simulations, The most standard procedure is as follows:
 
 <div class="table-container" style="overflow-x: auto; width: 80%; margin: auto;">
-  <table cellspacing="0" cellpadding="6" border="1.5" style="border: 1.5px solid #5ED464; border-collapse: collapse; width: 100%; background-color: black; font-size: 0.65em;">
-    <caption style="caption-side: top; padding: 10px; color: #5ED464;"><b>Table 2.</b> Complete Brain Simulation Process.</caption>
+  <table cellspacing="0" cellpadding="6" border="1.5" style="border: 1.5px solid #e57550; border-collapse: collapse; width: 100%; background-color: #f8d8c3; font-size: 0.65em;">
+    <caption style="caption-side: top; padding: 10px; color: #e57550;"><b>Table 2.</b> Complete Brain Simulation Process.</caption>
     <thead>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; font-weight: bold; width: 30%;">Step</th>
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; font-weight: bold; width: 70%;">Description</th>
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; font-weight: bold; width: 30%;">Step</th>
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; font-weight: bold; width: 70%;">Description</th>
       </tr>
     </thead>
     <tbody>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="2">1. Pre-Processing</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="2">1. Pre-Processing</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Aligning all the imaged slices correctly into a 3D volume
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Removing of artifacts
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">2. Segmentation & Proofreading</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">2. Segmentation & Proofreading</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Segmenting tissue using ML models (U-nets, flood filling networks, local shape descriptors) to outline cell bodies, trace axons, dendrites, and synaptic connections
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Proofreading and correcting errors of automated segmentation (incorrect connections, missed branches, and false mergers)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • In barcoded specimens: using molecular barcodes to verify neuron identity and connections
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;">3. Classification</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;">3. Classification</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Classification and labelling of cell types (glia, astrocytes, etc.)
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">4. Connectome Graph Creation</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">4. Connectome Graph Creation</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Converting the 3D reconstruction into a structured graph representation
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Defining nodes (neurons) and edges (synaptic connections)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Adding metadata about neuron types, molecular properties and synaptic strengths
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">5. Simulation Model Building</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">5. Simulation Model Building</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Choosing neuron models and parameters (LIF, Hodgkin-Huxley, etc.)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Setting neurotransmitter types and receptor responses
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Implementing neuroplasticity mechanisms based on available data (short & long-term plasticity)
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">6. Environment/Body Integration</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">6. Environment/Body Integration</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Connecting sensory inputs to appropriate neurons
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Mapping motor outputs to effectors
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Creating physical model of environment for interaction
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">7. Execution</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="3">7. Execution</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Setting up infrastructure (partitioning the network across GPUs, setting up memory management, etc.)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Initializating (membrane potential, ion concentration, etc.)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Validation testing (comparing actual brain's neural activity patterns to the model)
         </td>
       </tr>
       
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="2">8. Parameter Calibration</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="2">8. Parameter Calibration</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Tuning nueorn parameters based on functional data (calcium/voltage/etc., imaging)
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Calibrating neuroplasticity rules based on available data
         </td>
       </tr>
@@ -240,7 +240,7 @@ Once you have the brain imaging data, the next step is to turn it into a functio
 <br>
 <div style="position: relative; text-align: center;">
   <hr style="border-top: 1px solid black; margin: 0;">
-  <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: black; margin: 0; padding: 0 10px; color: #5ED464;"><em>Technical rabbit hole end</em></p>
+  <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #f8d8c3; margin: 0; padding: 0 10px; color: #e57550;"><em>Technical rabbit hole end</em></p>
 </div>
 <br>
 
@@ -278,211 +278,211 @@ As for high-res mapping: The first human nanoscale brain connectome milestone ca
 To witness human emulations within the next decade three key disciplines need "unhobbling":
 
 <div class="table-container" style="overflow-x: auto; width: 85%; margin: auto;">
-  <table cellspacing="0" cellpadding="6" border="1.5" style="border: 1.5px solid #5ED464; border-collapse: collapse; width: 100%; background-color: black; font-size: 0.65em;">
-    <caption style="caption-side: top; padding: 10px; color: #5ED464;"><b>Table 2.</b> Innovations Needed for Full Human Brain Uploading.</caption>
+  <table cellspacing="0" cellpadding="6" border="1.5" style="border: 1.5px solid #e57550; border-collapse: collapse; width: 100%; background-color: #f8d8c3; font-size: 0.65em;">
+    <caption style="caption-side: top; padding: 10px; color: #e57550;"><b>Table 2.</b> Innovations Needed for Full Human Brain Uploading.</caption>
     <thead>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; font-weight: bold;">Domain</th>
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">Current Limitations</th>
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">Innovations Needed</th>
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">Urgency /10</th>
-        <th style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">Feasibility /10</th>
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; font-weight: bold;">Domain</th>
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">Current Limitations</th>
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">Innovations Needed</th>
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">Urgency /10</th>
+        <th style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">Feasibility /10</th>
       </tr>
     </thead>
     <tbody>
       <!-- SOFTWARE SECTION -->
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="4">Software</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="4">Software</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Compression algorithms	
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Specialised compression algorithms for neuronal data. <br> [Sparse matrix compression achieving 100x-150x compression of the original dataset]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           7
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           10
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Simulation environments
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Holistic simulation engine. <br>[Integration of sensory and motor systems with simulated brains, modelling neuro-plasticity, etc.,]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           9
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           8
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Benchmarks
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Standardized metrics to validate simulations.<br>
           [Benchmarks to validate simulation accuracy and "human-likeness"]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           8
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           10
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Neuron segmentation and proofreading
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • AI reconstruction models with better attention mechanics.<br>
           [Current neuron reconstruction accounts for 95% of connectomics costs due to human leabelling need. Automated proofreading will solve this]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           9
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           10
         </td>
       </tr>
       
       <!-- HARDWARE SECTION -->
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="5">Hardware</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="5">Hardware</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Electron microscope cost and speed
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Cheaper and faster EMs<br> [2x cost reduction (\$2M ➝ \$1M) and 10x-20x imaging speed increase (~50μm³/s ➝ 1000μm³/s) would make EM imaging feasible]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           10
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           7
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Data storage cost
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Exascale data centres. <br>[10x reduction in data storage cost would be helpful (from \$200M ➝ \$20M) for a 100x compressed human connectome. Generally there is a 10x-per-decade cost reduction in data storage by default, but can we speed it up?]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           10
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           5
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Compute cost
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Brain-like neuromorphic/biohybrid computing or cheaper GPU clusters.<br> [Cheaper mass compute will be neccessary. 1:1 biophysical simulations will require up to ~5.5×10²⁰ FLOP/s. Mores law will reduce prices by default, but can we design more brain-like hardware to speed it up?]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           7
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           5
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Manual wetlab work
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Automated robotics wetlab <br>[Cutting, imaging and staning apparature which will allow to increase the complexity of wetlab protocols whilst removing human error]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           4
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           7
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Destructive sample imaging
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Non-destructive nanoscale imaging method<br>
           [Imaging akin to nanoscale muon-tomography which can non-invasively scan the brain down to a synapse]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           10
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           3
         </td>
       </tr>
       
       <!-- WETWARE SECTION -->
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="4">Wetware</td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; vertical-align: middle; font-weight: bold;" rowspan="4">Wetware</td>
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Expansion microscopy magnification
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Faster expansion microscopy protocols<br>
           [Current ExM protocols achieves 10-40x expansion (25x = ~20nm) which is already enough, yet getting a consistent isotropic 40x zoom would equate it to EM resolution]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           6
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           8
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Lack of electron microscopy staining protocols
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Staining protocols for EM imaging.<br>
           Incomplete molecular characterization during electron microscopy imaging means we miss functional details of the upload. This is an issue with electron and synchrotron imaging, but not expansion microscopy. 
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           7
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           6
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • Scalability of protein profiling
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left; border-bottom: 1px dashed #e57550;">
           • More scalable protein barcoding protocols. [Current protocols require multiple rounds of staining/washes and need testing on larger organisms]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           10
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center; border-bottom: 1px dashed #5ED464;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center; border-bottom: 1px dashed #e57550;">
           8
         </td>
       </tr>
-      <tr style="background-color: rgba(94, 212, 100, 0.1);">
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+      <tr style="background-color: rgba(229, 117, 80, 0.1);">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • Scalability of functional nanoscale imaging
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: left;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: left;">
           • New nanometer functional imaging methods that can scale to whole brain neuron populations <br>
           [Current methods like voltage imaging, calcium imaging, etc., are either indirect, damaging or unscalable to whole brains. Thus methods like fUS with ~15 micrometers theoretical limit that scale to larger neuron populations could be the remedy]
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           10
         </td>
-        <td style="border: 1.5px solid #5ED464; background-color: rgba(94, 212, 100, 0.1); color: #5ED464; text-align: center;">
+        <td style="border: 1.5px solid #e57550; background-color: rgba(229, 117, 80, 0.1); color: #e57550; text-align: center;">
           6
         </td>
       </tr>
