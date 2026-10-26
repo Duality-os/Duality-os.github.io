@@ -6,2137 +6,850 @@ hidden: true
 ---
 <!-- URL of the post: https://duality.nexus/ -->
 
-<!-- STYLING THE PAGE -->
-
 <style>
-  @font-face {
-    font-family: 'C&C Red Alert';
-    src: url('/fonts/c_c_red_alert_inet/candc.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  html {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    position: relative; /* Needed for overflow to work properly */
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 100vh; /* Use viewport height */
-    background-color: #EDD5C0 !important; /* Keep background beige for overscroll */
-    max-width: 100vw; /* Limit to viewport width */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  body {
-    background-color: #EDD5C0 !important;
-    color: white !important;
-    max-width: 100vw !important; /* Use viewport width */
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Use viewport height */
-    overflow: hidden; /* Prevent any overflow */
-  }
-  
-  /* Force the page to end at the footer */
-  body::after {
-    display: none !important;
-    content: none !important;
-  }
-  
-  /* Hide the site header (top navigation bar) */
-  .site-header {
-    display: none !important;
-  }
-  
-  /* Hide the post header (title and meta) */
-  .post-header {
-    display: none !important;
-  }
-  
-  /* Hide the share links */
-  .share-links {
-    display: none !important;
-  }
-  
-  /* Hide the navigation links at the bottom */
-  .post_navi {
-    display: none !important;
-  }
-  
-  .site-footer, footer {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    visibility: hidden !important;
-  }
-  
-  .site-title, .site-title:visited, .site-nav .page-link {
-    color: white !important;
-  }
-  
-  /* Override theme width constraints */
-  .page-content {
-    padding: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    overflow: hidden; /* Prevent any overflow */
-    margin-bottom: 0 !important; /* No bottom margin */
-    flex: 1 0 auto; /* Allow content to grow but not shrink */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  .wrapper {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 0 !important; /* Remove horizontal padding */
-    margin: 0 !important;
-    overflow: hidden; /* Prevent any overflow */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  .post-content {
-    background-color: #EDD5C0;
-    color: white;
-    padding: 20px 0; /* Vertical padding only */
-    border-radius: 8px;
-    max-width: 100% !important;
-    width: 100% !important;
-    overflow: hidden; /* Prevent any overflow */
-    margin-bottom: 0 !important; /* No bottom margin */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  .post-content a {
-    color: #00aaff; /* Make links a bright blue color for better visibility on black */
-  }
-  
-  .post-content img {
-    mix-blend-mode: normal !important; /* Override any mix-blend-mode settings */
-  }
-  
-  .share-links a {
-    color: #00aaff !important;
-  }
-  
-  /* Navigation buttons - now text with underline */
-  .nav-buttons {
-    position: fixed;
-    top: 20px;
-    right:10%; /* Moved to 35% from the right edge */
-    z-index: 1000;
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 8px 0;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: underline;
-    text-decoration-color: #4A90E2;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-  }
-  
-  .nav-button:hover {
-    color: #4A90E2;
-  }
-  
-  /* Horizontal divider */
-  .section-divider {
-    border: none;
-    height: 1px;
-    background: linear-gradient(to right,
-                               rgba(74, 144, 226, 0.05),
-                               rgba(74, 144, 226, 0.3) 20%,
-                               rgba(74, 144, 226, 0.8) 40%,
-                               rgba(74, 144, 226, 0.8) 60%,
-                               rgba(74, 144, 226, 0.3) 80%,
-                               rgba(74, 144, 226, 0.05));
-    width: 100vw;
-    margin: 40px -50vw;
-    left: 50%;
+  /* ---------- Hero ---------- */
+  .hero {
     position: relative;
-    overflow-x: visible;
-    margin-bottom: 0 !important;
-  }
-  
-  /* Main header image */
-  .header-image {
-    max-width: 100%;
-    height: auto;
-    mix-blend-mode: normal;
-    opacity: 0.9;
-    margin-top: 80px; /* Added top margin (approximately 20% of image height) */
-  }
-  
-  /* Motivation section - centered italic text */
-  .motivation-text {
-    font-style: italic;
-    text-align: center;
-    max-width: 800px;
-    margin: 60px auto;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    padding: 0 20px;
-  }
-  
-  /* Alternating layout styles */
-  .section-row {
-    display: flex;
-    margin: 60px auto;
-    max-width: 1200px;
-    width: 100%;
-    min-height: 150px; /* Set minimum height to ensure proper centering */
-    align-items: center; /* Center items vertically */
-  }
-  
-  .section-row.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .section-title-container {
-    width: 30%;
-    display: flex;
-    align-items: center; /* Vertically center the title */
-    justify-content: center;
-    padding: 20px;
-    height: 100%; /* Match height of parent */
-    position: relative; /* For absolute positioning fallback */
-  }
-  
-  .section-title {
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-    position: relative; /* Enable positioning */
-    top: 50%; /* Position at middle */
-    transform: translateY(-50%); /* Offset by half height for perfect centering */
-    width: 100%; /* Full width of container */
-    margin: 0; /* Remove default margins */
-  }
-  
-  .section-content {
-    width: 70%;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding: 20px;
-    text-align: left !important; /* Force left alignment */
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    height: 100%; /* Match height of parent */
-  }
-  
-  /* Ensure all text elements within section content are left-aligned */
-  .section-content p, 
-  .section-content div, 
-  .section-content span, 
-  .section-content strong, 
-  .section-content em {
-    text-align: left !important; /* Force left alignment for all text elements */
-    width: 100%; /* Full width */
-    margin-left: 0; /* No left margin */
-    padding-left: 0; /* No left padding */
-  }
-  
-  /* Ensure consistent vertical alignment on all browsers */
-  @supports (display: flex) {
-    .section-row {
-      display: flex;
-      align-items: center;
-    }
-    
-    .section-title-container, .section-content {
-      display: flex;
-      align-items: center;
-    }
-    
-    .section-title {
-      position: static; /* Reset position */
-      top: auto; /* Reset top */
-      transform: none; /* Reset transform */
-    }
-  }
-  
-  /* Centered section style */
-  .centered-section {
-    margin: 60px auto;
-    max-width: 100% !important;
-    width: 100%;
-  }
-  
-  .centered-title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .centered-content {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding: 0 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  /* Team section specific styling */
-  .team-image {
-    width: 70%; /* Width for team images */
-    height: auto;
-    margin: 20px auto 40px; /* Center horizontally with auto left/right margins */
-    max-width: none; /* Ensure it's not constrained by container */
-    display: block; /* Needed for margin auto to work */
-  }
-  
-  /* Approach visualization specific styling */
-  .approach-image {
-    width: 70%; /* 70% of screen width */
-    height: auto;
-    margin: 20px auto 40px; /* Center horizontally with auto left/right margins */
-    max-width: none; /* Ensure it's not constrained by container */
-    display: block; /* Needed for margin auto to work */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .section-row, .section-row.reverse {
-      flex-direction: column;
-    }
-    
-    .section-title-container, .section-content {
-      width: 100%;
-      padding: 10px 15px; /* Added horizontal padding */
-      box-sizing: border-box; /* Ensure padding is included in width */
-    }
-    
-    .section-title {
-      font-size: 3rem; /* Adjusted for mobile from 2.5rem */
-      word-wrap: break-word; /* Ensure long words break */
-    }
-    
-    .section-content {
-      font-size: 1rem; /* Slightly smaller font on mobile */
-      word-wrap: break-word; /* Ensure long words break */
-    }
-    
-    .nav-buttons {
-      top: 10px;
-      right: 10%; /* Adjusted for mobile */
-      gap: 15px;
-    }
-    
-    .nav-button {
-      padding: 5px 0;
-      font-size: 0.9rem;
-    }
-    
-    .header-image {
-      margin-top: 60px; /* Smaller top margin on mobile */
-    }
-    
-    .motivation-text {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 40px auto;
-      padding: 0 15px; /* Added horizontal padding */
-      word-wrap: break-word; /* Ensure long words break */
-    }
-    
-    .centered-content {
-      padding: 0 15px; /* Added horizontal padding */
-      word-wrap: break-word; /* Ensure long words break */
-    }
-    
-    .team-image {
-      width: 90%; /* Maintain width on mobile */
-    }
-    
-    .centered-title {
-      font-size: 3rem; /* Adjusted for mobile from 2.5rem */
-      padding: 0 15px; /* Added horizontal padding */
-      word-wrap: break-word; /* Ensure long words break */
-    }
-    
-    .custom-footer {
-      padding: 20px 15px; /* Added horizontal padding */
-    }
-    
-    /* Target the step icons directly with higher specificity */
-    .process-timeline-container .step-icon,
-    .step-icon-1,
-    .step-icon-2,
-    .step-icon-3 {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-      width: 0 !important;
-      height: 0 !important;
-    }
-    
-    /* Make sure any parent elements aren't reserving space for the icons */
-    .process-timeline-container .step-icon-1,
-    .process-timeline-container .step-icon-2,
-    .process-timeline-container .step-icon-3 {
-      position: absolute !important;
-      z-index: -999 !important;
-    }
-    
-    .backing-boxes {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    
-    .backing-box {
-      width: 80%; /* Changed from 85% to 80% */
-      min-height: auto;
-      padding: 20px;
-    }
-  }
-
-  /* Additional mobile breakpoint for smaller phones */
-  @media (max-width: 480px) {
-    .nav-buttons {
-      gap: 10px;
-    }
-  }
-  
-  /* Add word-wrap to all text containers */
-  .section-content, .centered-content, .motivation-text, .footer-content {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-  
-  /* Custom footer styling with black background */
-  .custom-footer {
-    background-color: #EDD5C0 !important; /* Pure beige background */
-    color: white; /* Text is white for contrast */
-    padding: 30px 0;
-    margin: 0 !important; /* Remove ALL margins */
-    border-top: 0 !important; /* Remove any potential top border */
-    text-align: center;
-    width: 100%;
-    position: relative; /* Add position relative */
-    z-index: 10; /* Ensure it's above other elements */
-    box-sizing: border-box; /* Include padding in width calculation */
-    overflow: hidden; /* Prevent overflow */
-  }
-  
-  /* Create a pseudo-element to cover any space below the footer */
-  .custom-footer::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1000px; /* Extend well below the viewport */
-    left: 0;
-    width: 100%;
-    height: 1000px; /* Tall enough to cover any space */
-    background-color: #EDD5C0; /* Match footer color - pure beige */
-    z-index: 5; /* Below footer content but above other elements */
-  }
-  
-  /* Hide any potential elements after the footer */
-  .custom-footer ~ * {
-    display: none !important;
-  }
-  
-  .footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: "Times New Roman", Times, serif;
-    color: white; /* Changed to white */
-  }
-  
-  .footer-tagline {
-    font-style: italic;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.8); /* Lighter white for contrast */
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px 0;
-  }
-  
-  .footer-link {
-    color: white !important; /* Changed to white with !important to override any inheritance */
-    text-decoration: underline; /* Ensure underline is applied */
-    transition: color 0.3s ease;
-    font-weight: normal; /* Ensure normal font weight */
-  }
-  
-  .footer-link:hover {
-    color: rgba(0, 0, 0, 0.7); /* Dark hover color for contrast on green */
-  }
-  
-  .footer-copyright {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8); /* Lighter white for contrast */
-    margin-top: 20px;
-  }
-  
-  /* Fix for potential scrollbar issues */
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-  }
-  
-  /* Contact button styling */
-  .contact-button {
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .contact-button:hover {
-    background-color: #4A90E2; /* Blue */
-    color: white;
-  }
-  
-  .email-text {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #ccc;
-  }
-  
-  /* Who We Back section styling */
-  .backing-boxes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 40px auto;
-    max-width: 1200px;
-    position: relative; /* Make this a positioning context */
-  }
-  
-  .backing-box {
-    background-color: rgba(74, 144, 226, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 30px;
-    width: 300px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    min-height: 400px;
-    transform: translateY(0); /* Initial position */
-    box-shadow: 0 0 0 rgba(229, 117, 80, 0); /* Initial shadow */
-    position: relative;
-  }
-  
-  .backing-box:hover {
-    border-color: #4A90E2;
-    box-shadow: 0 15px 30px rgba(74, 144, 226, 0.2); /* Enhanced shadow for depth */
-    transform: translateY(-10px); /* Lift up by 10px on hover */
-  }
-  
-  .backing-icon {
-    background-color: rgba(74, 144, 226, 0.1);
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .backing-icon img {
-    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(95%);
-  }
-  
-  .backing-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-  }
-  
-  .backing-box:hover .backing-title {
-    color: #4A90E2;
-  }
-  
-  .backing-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-    flex-grow: 1;
-  }
-  
-  .backing-preference {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-  }
-  
-  .preference-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 10px;
-  }
-  
-  .preference-scale {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .preference-scale span {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .scale-bar {
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
     overflow: hidden;
+    isolation: isolate;
   }
-  
-  .scale-fill {
-    height: 100%;
-    background-color: #4A90E2;
-    border-radius: 2px;
-  }
-  
-  .preference-qualities {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .quality-option {
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .quality-option.active {
-    background-color: #4A90E2;
-    color: black;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .backing-boxes {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    
-    .backing-box {
-      width: 80%; /* Changed from 85% to 80% */
-      min-height: auto;
-      padding: 20px;
-    }
-  }
-  
-  /* Process/Roadmap Section with completely restructured HTML */
-  .process-section {
-    padding: 30px 20px 49px 20px; /* Reduced bottom padding by another 10% from 54px to 49px */
-    max-width: 100%;
-    position: relative;
-    margin-top: 60px; /* Added top margin to match the centered-section */
-  }
-  
-  /* Ensure process section is truly centered */
-  @media (max-width: 768px) {
-    .process-section {
-      padding: 30px 0 49px 0; /* Remove horizontal padding */
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    
-    .process-timeline-container {
-      grid-template-columns: 1fr;
-      margin: 60px auto;
-      width: 100%; /* Ensure full width */
-      padding: 0; /* Remove any padding */
-      position: relative;
-    }
-    
-    .timeline-line {
-      grid-column: 1;
-      justify-self: center;
-      width: 2px;
-      position: absolute;
-      left: 50%; /* Center exactly */
-      transform: translateX(-50%); /* Offset by half width */
-      height: 90%;
-      top: 5%; /* Start slightly below the top */
-      z-index: 1;
-      margin: 0; /* Remove any margins */
-    }
-    
-    .timeline-item.left, .timeline-item.right {
-      grid-column: 1;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      padding: 0 20px; /* Add horizontal padding */
-      margin: 0 auto 60px auto;
-      width: 100%; /* Take full width */
-      max-width: 300px; /* Limit maximum width */
-      position: relative;
-      z-index: 2;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .step-number, .step-description {
-      text-align: center !important; /* Force center alignment */
-      margin-left: auto;
-      margin-right: auto;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 8px 15px;
-      border-radius: 5px;
-      width: auto;
-      display: inline-block;
-      max-width: 100%;
-    }
-    
-    /* Hide step icons on mobile */
-    .step-icon {
-      display: none;
-    }
-    
-    /* Center the funding container properly */
-    .funding-container {
-      width: 80%;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      left: 0 !important; /* Reset any potential left offset */
-      transform: none !important; /* Reset any transform that might shift it */
-    }
-  }
-  
-  .process-timeline-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 80px auto;
-    display: grid;
-    grid-template-columns: 1fr 2px 1fr;
-    grid-template-rows: auto 150px auto 150px auto;
-    gap: 0;
-    min-height: 600px; /* Ensure enough height for positioning */
-  }
-  
-  .timeline-line {
-    grid-column: 2;
-    grid-row: 1 / span 5;
-    justify-self: center;
-    width: 2px;
-    background: rgba(255, 255, 255, 0.2);
-    height: 127%; /* Increased by 10% from 117% */
-    z-index: 1;
-    position: relative;
-    top: -10%; /* Move starting point up by 10% while increasing height */
-    /* Add a max-height to prevent overflow */
-  }
-  
-  .timeline-item {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    position: relative;
-    margin-bottom: 0;
-  }
-  
-  .timeline-item.left {
-    grid-column: 1;
-    text-align: right;
-    padding-right: 30px;
-    align-items: flex-end;
-  }
-  
-  .timeline-item.right {
-    grid-column: 3;
-    text-align: left;
-    padding-left: 30px;
-    align-items: flex-start;
-  }
-  
-  /* Explicit row positioning for each step */
-  .timeline-item:nth-child(2) { /* Step 1 */
-    grid-row: 1;
-  }
-  
-  .timeline-item:nth-child(3) { /* Step 2 */
-    grid-row: 3;
-  }
-  
-  .timeline-item:nth-child(4) { /* Step 3 */
-    grid-row: 5;
-  }
-  
-  /* Completely separate icon positioning */
-  .step-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgba(74, 144, 226, 0.1); /* Blue background for step icons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .hero::before {
+    content: "";
     position: absolute;
-    z-index: 10;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(60% 50% at 50% 46%, rgba(251, 246, 239, 0.95), rgba(251, 246, 239, 0) 70%),
+      radial-gradient(40% 40% at 8% 100%, rgba(79, 140, 247, 0.10), rgba(79, 140, 247, 0) 70%);
+  }
+
+  /* The bottom-right neuron from neuron.png, rising out of the bottom-left
+     corner with half of it off-screen. */
+  .hero-neuron {
+    position: absolute;
+    left: 0;
+    bottom: -9vh;
+    height: 104vh;
+    width: auto;
+    max-width: none;
+    z-index: -1;
+    transform-origin: 50% 100%;
+    transform: translateX(-50%) rotate(14deg);
+    animation: neuron-sway 11s ease-in-out infinite alternate;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  @keyframes neuron-sway {
+    from { transform: translateX(-50%) rotate(12deg); }
+    to   { transform: translateX(-50%) rotate(16deg); }
+  }
+
+  .hero-inner {
+    width: min(1100px, 100%);
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  #title-canvas {
+    display: block;
+    width: 100%;
+    height: clamp(150px, 24vw, 300px);
+  }
+
+  .hero-tagline {
+    margin: 6px 0 0;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink-soft);
+  }
+
+  .hero-tagline strong {
+    font-weight: 600;
+    color: var(--blue-deep);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 1.5px solid var(--ink-faint);
+    border-radius: 999px;
+    opacity: 0.7;
   }
 
-  .step-icon img {
-    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(95%);
-  }
-  
-  .step-icon-1 {
-    top: 0;
-  }
-  
-  .step-icon-2 {
-    top: calc(1fr + 150px); /* Position at second content row */
-  }
-  
-  .step-icon-3 {
-    top: calc(1fr + 150px + 1fr + 150px); /* Position at third content row */
-  }
-  
-  /* Fix vertical positioning of icons */
-  .step-icon-1 {
-    top: 20px;
-  }
-  
-  .step-icon-2 {
-    top: calc(20px + 150px + 150px);
-  }
-  
-  .step-icon-3 {
-    top: calc(20px + 150px + 150px + 150px + 150px);
-  }
-  
-  .step-number {
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #4A90E2;
-  }
-
-  .step-highlight {
-    color: white;
-  }
-  
-  .step-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 400px;
-  }
-  
-  .process-cta-container {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    padding: 60px 40px;
-    text-align: center;
-    margin-top: 60px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .process-cta-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  .cta-highlight {
-    color: #4A90E2;
-  }
-  
-  .process-cta-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .process-cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 0;
-    margin-top: 20px;
-  }
-  
-  .process-cta-button {
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .process-cta-button.primary {
-    background-color: white;
-    color: black;
-  }
-  
-  .process-cta-button.primary:hover {
-    background-color: #4A90E2;
-    color: white;
-  }
-  
-  .process-cta-button.secondary {
-    background-color: transparent;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  .process-cta-button.secondary:hover {
-    border-color: #4A90E2;
-    color: #4A90E2;
-  }
-  
-  .process-deadline {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 20px;
-  }
-  
-  /* Update SVG fill color in all steps */
-  .timeline-item svg {
-    fill: #4A90E2; /* Changed to blue */
-  }
-  
-  /* Further improved dynamic glow effect for backing boxes */
-  .backing-boxes {
-    position: relative; /* Make this a positioning context */
-  }
-  
-  /* Individual glow element for each box */
-  .box-glow {
+  .hero-scroll::after {
+    content: "";
     position: absolute;
-    width: 250px;
-    height: 250px;
+    left: 50%;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, rgba(74, 144, 226, 0.03) 60%, rgba(74, 144, 226, 0) 80%);
-    pointer-events: none;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    filter: blur(15px);
-    mix-blend-mode: screen;
-    opacity: 0;
-    left: 0;
-    top: 0;
+    background: var(--gold-deep);
+    animation: scroll-dot 1.8s ease-in-out infinite;
   }
-  
-  /* Funding section with brain pixels effect */
-  .funding-container {
-    position: relative;
-    background-color: rgba(74, 144, 226, 0.1);
-    border: 1px solid rgba(74, 144, 226, 0.2);
-    border-radius: 20px;
-    padding: 50px 40px;
-    margin: 120px auto 49px auto;
-    max-width: 690px; /* This will apply on desktop */
+
+  @keyframes scroll-dot {
+    0%   { transform: translateY(0); opacity: 1; }
+    80%  { transform: translateY(16px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 0; }
+  }
+
+  /* ---------- Sections ---------- */
+  .section {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 110px 24px;
+  }
+
+  .section-head {
     text-align: center;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+    margin-bottom: 56px;
   }
-  
-  /* Add responsive adjustment for mobile devices */
-  @media (max-width: 768px) {
-    .process-section {
-      padding-bottom: 20px !important; /* Reduce bottom padding of the parent section */
-    }
 
-    .process-timeline-container {
-      margin-bottom: 20px !important; /* Reduce space after the timeline */
-    }
+  .section-head h2 {
+    font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+    line-height: 1.1;
+    margin: 10px 0 0;
+  }
 
-    .funding-container {
-      width: 80%; /* 80% of screen width on mobile */
-      max-width: none; /* Override the max-width limit */
-      padding: 40px 20px; /* Slightly reduce padding for better proportions */
-      margin-left: auto !important; /* Force center alignment */
-      margin-right: auto !important; /* Force center alignment */
-      margin-bottom: 30px !important; /* Reduced from 49px to bring footer closer */
-      margin-top: 0px !important; /* Changed from -60px to -50px to drop by 10px */
-      box-sizing: border-box; /* Include padding in width calculation */
-      position: relative !important; /* Ensure positioning works */
-      z-index: 10 !important; /* Keep it above other elements */
-    }
-    
-    /* Make the funding title a bit smaller on mobile for better fit */
-    .funding-container .funding-content h2.funding-title {
-      font-size: 2.7rem !important; /* Adjusted size for mobile */
-    }
-    
-    /* Reduce footer top padding on mobile */
-    .custom-footer {
-      padding-top: 15px !important; /* Reduced from 30px to be closer to funding box */
-    }
+  /* Mission */
+  .mission {
+    background: linear-gradient(180deg, var(--bg), var(--bg-deep) 35%, var(--bg));
   }
-  
-  .funding-container:hover {
-    box-shadow: 0 0 30px rgba(74, 144, 226, 0.1);
-  }
-  
-  .funding-title {
-    font-size: 3.125rem; /* Increased by 25% from 2.5rem to 3.125rem */
-    font-weight: 700;
-    margin-bottom: 30px;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  /* Add this new rule with higher specificity and !important to ensure it works */
-  .funding-container .funding-content h2.funding-title {
-    font-size: 2.4rem !important; /* Much larger font size with !important flag */
-    line-height: 1.2 !important; /* Adjust line height for better readability */
-  }
-  
-  .funding-highlight {
-    color: #4A90E2;
-  }
-  
-  /* Canvas element for brain pixels effect */
-  .neural-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allow clicks to pass through */
-    z-index: 0;
-  }
-  
-  /* Make sure content is above the canvas */
-  .funding-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Blue mission section specific styling */
-  .mission-section {
-    background-color: rgba(74, 144, 226, 0.1);
-    padding: 50px 0; /* Increased from 40px to 70px for more vertical space */
-    width: 100vw; /* Full viewport width */
-    margin: 0 -50vw; /* Negative margin to extend full width */
-    left: 50%; /* Center the section */
-    position: relative; /* Enable positioning */
-    box-sizing: border-box;
-    margin-bottom: 0 !important; /* Force no bottom margin */
-  }
-  
-  .mission-content {
-    max-width: 1200px; /* Match the approach section width */
-    margin: 0 auto; /* Center horizontally */
-    display: flex;
+
+  .mission .section {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 64px;
     align-items: center;
   }
-  
-  /* Add mobile-specific styling for mission section */
-  @media (max-width: 768px) {
-    .mission-content {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center all text */
-      padding: 0 20px; /* Add some horizontal padding */
-    }
-    
-    .mission-content .section-title-container {
-      margin-bottom: 20px; /* Add space between title and content */
-      width: 100%; /* Full width */
-    }
-    
-    .mission-content .section-content {
-      width: 100%; /* Full width */
-    }
-    
-    .mission-content .section-title {
-      text-align: center; /* Ensure title is centered */
-      margin: 0 auto 10px; /* Center and add bottom margin */
-    }
-    
-    .mission-content p {
-      text-align: center; /* Center paragraph text */
-      margin-left: auto;
-      margin-right: auto;
-    }
+
+  .mission h2 {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    line-height: 1.05;
+    margin: 10px 0 0;
   }
-  
-  /* Ensure no margin between mission section and divider */
-  .mission-section + .section-divider {
-    margin-top: 0 !important; /* Remove top margin from divider following mission section */
+
+  .mission h2 em {
+    font-style: italic;
+    color: var(--blue-deep);
   }
-  
-  /* Add these style rules to your existing <style> section */
-  h1, h2, h3, 
-  .section-title,
-  .centered-title,
-  .funding-title,
-  .process-cta-title {
-    font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif !important;
-    /* The !important flag ensures these styles aren't overridden by other CSS */
+
+  .mission p {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
   }
-  
-  /* Make section titles larger */
-  .section-title {
-    font-size: 4rem; /* Increased from 3rem */
+
+  .mission p.lead {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 100;
+    font-size: 1.55rem;
+    line-height: 1.4;
+    color: var(--ink);
   }
-  
-  .centered-title {
-    font-size: 4rem; /* Increased from 3rem */
+
+  /* Approach cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
-  
-  /* Set Helvetica font specifically for step titles */
-  .step-number {
-    font-family: Helvetica, Arial, sans-serif !important; /* Override the Red Alert font */
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #e57550;
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
-  
-  /* Responsive adjustments for larger titles */
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 3rem; /* Adjusted for mobile from 2.5rem */
-    }
-    
-    .centered-title {
-      font-size: 3rem; /* Adjusted for mobile from 2.5rem */
-    }
+
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(79, 140, 247, 0.45);
+    box-shadow: 0 24px 48px -20px rgba(45, 95, 216, 0.35);
   }
-  
-  /* If you want to keep your original header title at the top as is */
-  .header-title {
-    font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif !important;
-    font-size: 13.5rem !important; /* Increased by 20% from 11.25rem to 13.5rem */
-  }
-  
-  /* Add a style for header subtitle to increase its size */
-  .header-subtitle {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #e57550;
+
+  .card-num {
     position: absolute;
+    top: 24px;
+    right: 26px;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+  }
+
+  .icon-bubble {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--blue-deep);
+    background: radial-gradient(circle at 50% 45%, var(--gold) 0%, rgba(244, 202, 155, 0.55) 55%, rgba(79, 140, 247, 0.18) 100%);
+    box-shadow: 0 0 0 6px rgba(79, 140, 247, 0.08);
+  }
+
+  .icon-bubble svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card h3 {
+    font-size: 1.6rem;
+    margin: 22px 0 8px;
+  }
+
+  .card p {
+    color: var(--ink-soft);
+    margin: 0 0 26px;
+    flex-grow: 1;
+  }
+
+  .card-meta {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+  }
+
+  .meter {
+    height: 6px;
+    margin: 10px 0 8px;
+    border-radius: 999px;
+    background: var(--gold-tint);
+    overflow: hidden;
+  }
+
+  .meter span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--gold-deep), var(--blue));
+  }
+
+  .meter-label {
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .chip {
+    padding: 4px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+
+  .chip.is-on {
+    border-color: transparent;
+    background: var(--blue-deep);
+    color: #fff;
+  }
+
+  /* Roadmap */
+  .timeline {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px;
+    background: linear-gradient(to bottom, var(--gold-deep), var(--blue) 60%, rgba(79, 140, 247, 0));
+    opacity: 0.6;
+  }
+
+  .step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 96px 1fr;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step-node {
+    grid-column: 2;
+    justify-self: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--blue-deep);
+    background: radial-gradient(circle at 50% 45%, var(--gold) 0%, #F8DFC2 60%, var(--surface) 100%);
+    border: 1px solid rgba(217, 149, 79, 0.45);
+    box-shadow: 0 0 0 8px var(--bg), 0 10px 30px -8px rgba(217, 149, 79, 0.6);
+  }
+
+  .step-node svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .step-body {
+    grid-row: 1;
+  }
+
+  .step.left .step-body {
+    grid-column: 1;
+    text-align: right;
+  }
+
+  .step.right .step-body {
+    grid-column: 3;
+  }
+
+  .step-body h3 {
+    font-size: 1.75rem;
+    margin: 6px 0 8px;
+  }
+
+  .step-body p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  /* Contact CTA */
+  .cta {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 40px;
+    text-align: center;
+    border-radius: 28px;
+    overflow: hidden;
+    background:
+      radial-gradient(80% 90% at 50% 0%, rgba(244, 202, 155, 0.55), rgba(244, 202, 155, 0) 70%),
+      var(--surface);
+    border: 1px solid rgba(217, 149, 79, 0.35);
+    box-shadow: var(--shadow);
+  }
+
+  .cta canvas {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    bottom: 30px;
-    font-weight: 300;
-    font-size: 1.8rem; /* Increased by 20% from 1.5rem to 1.8rem */
+    height: 100%;
+    pointer-events: none;
   }
-  
-  /* Responsive adjustments for header title */
-  @media (max-width: 768px) {
-    .header-title {
-      font-size: 6.75rem !important; /* Keep the existing mobile size */
-    }
-    
-    .header-subtitle {
-      font-size: 1.5rem !important; /* Force original size on mobile */
-      bottom: 50px !important; /* Force original position on mobile */
-    }
+
+  .cta-content {
+    position: relative;
   }
-  
-  /* Custom text selection color */
-  ::selection {
-    background-color: rgba(74, 144, 226, 0.3); /* #4A90E2 at 30% opacity */
-    color: #ffffff; /* White text instead of black */
+
+  .cta h2 {
+    font-size: clamp(2.3rem, 5vw, 3.2rem);
+    margin: 0 0 12px;
   }
-  
-  /* For Firefox */
-  ::-moz-selection {
-    background-color: rgba(74, 144, 226, 0.3); /* #4A90E2 at 30% opacity */
-    color: #ffffff; /* White text instead of black */
+
+  .cta p {
+    color: var(--ink-soft);
+    margin: 0 auto 30px;
+    max-width: 460px;
   }
-  
-  @media (max-width: 768px) {
-    /* Center timeline items on mobile */
-    .process-timeline-container {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 60px !important;
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .mission .section {
+      grid-template-columns: 1fr;
+      gap: 24px;
     }
-    
-    /* Force grid layout to be ignored on mobile */
-    .timeline-item.left, .timeline-item.right {
-      grid-column: auto !important;
-      grid-row: auto !important;
-      text-align: center !important;
-      padding: 0 20px !important;
-      width: 80% !important;
-      max-width: 350px !important;
-      position: relative !important;
-      z-index: 2 !important;
-      /* Reset any desktop positioning */
-      left: auto !important;
-      right: auto !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    
-    /* Center the text content */
-    .step-number, .step-description {
-      text-align: center !important;
-      margin: 0 auto !important;
-      width: 100% !important;
-    }
-    
-    /* Adjust the vertical line */
-    .timeline-line {
-      position: absolute !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      height: 90% !important;
-      z-index: 1 !important;
-    }
-    
-    /* Keep previously added icon hiding rules */
-    .process-timeline-container .step-icon,
-    .step-icon-1,
-    .step-icon-2,
-    .step-icon-3 {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-      width: 0 !important;
-      height: 0 !important;
-    }
-    
-    .process-timeline-container .step-icon-1,
-    .process-timeline-container .step-icon-2,
-    .process-timeline-container .step-icon-3 {
-      position: absolute !important;
-      z-index: -999 !important;
+
+    .cards {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin: 0 auto;
     }
   }
-  
-  /* Add this fix at the bottom of your CSS file to ensure it overrides any previous styles */
-  @media (max-width: 768px) {
-    /* Fix for timeline items being off-center on mobile */
-    .process-timeline-container {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 60px !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      position: relative !important;
+
+  @media (max-width: 700px) {
+    .section {
+      padding: 80px 20px;
     }
-    
-    .timeline-item.left, .timeline-item.right {
-      grid-column: auto !important;
-      grid-row: auto !important;
-      text-align: center !important;
-      width: 80% !important;
-      max-width: 300px !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      position: relative !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      box-sizing: border-box !important;
+
+    .hero-neuron {
+      height: 76vh;
+      bottom: -8vh;
+      margin-left: -14vw;
+      opacity: 0.45;
     }
-    
-    .step-number, .step-description {
-      text-align: center !important;
-      width: 100% !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+
+    .timeline::before {
+      left: 32px;
+    }
+
+    .step,
+    .step.left,
+    .step.right {
+      grid-template-columns: 64px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .step-node {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .step.left .step-body,
+    .step.right .step-body {
+      grid-column: 2;
+      text-align: left;
+    }
+
+    .cta {
+      margin: 0 4px;
+      padding: 48px 22px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-neuron,
+    .hero-scroll::after {
+      animation: none;
     }
   }
 </style>
 
-<!-- Ensure proper viewport setting -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{% include duality-nav.html active="home" %}
 
-<!-- Navigation buttons -->
-<div class="nav-buttons">
-  <button class="nav-button" style="color: #4A90E2;" onclick="window.location.href='https://duality.nexus/'">Home</button>
-  <!-- <button class="nav-button" onclick="window.location.href='https://duality.nexus/team/'">Team</button> -->
-  <button class="nav-button" onclick="window.location.href='https://duality.nexus/research/'">Research</button>
-</div>
+<section class="hero">
+  <img class="hero-neuron" src="/images/neuron-hero.webp" alt="" aria-hidden="true">
+  <div class="hero-inner">
+    <h1 class="visually-hidden">Duality</h1>
+    <canvas id="title-canvas" aria-hidden="true"></canvas>
+    <p class="hero-tagline">Creating the most detailed <strong>brain maps</strong></p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"></div>
+</section>
 
-<!-- URL of the post: https://duality.nexus/ -->
-
-<!-- FINISH STYLING THE PAGE -->
-
-<!-- Replace header image with title and description -->
-<div class="header-title-container" style="text-align: center; margin-top: 100px; margin-bottom: 60px; position: relative; height: 300px;">
-  <!-- Original title hidden initially -->
-  <h1 class="header-title" style="font-weight: bold; margin-bottom: 15px; color: white; font-family: 'C&C Red Alert', Helvetica, Arial, sans-serif; opacity: 0; position: absolute; width: 100%; top: 0;">Duality</h1>
-  
-  <!-- Canvas for pixel animation -->
-  <canvas id="title-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></canvas>
-  
-  <!-- Subtitle slogan - now visible from the start -->
-  <h2 class="header-subtitle" style="font-family: Helvetica, Arial, sans-serif; color: #4A90E2; position: absolute; width: 100%; bottom: 32px; font-weight: 300; font-size: 1.4rem;">Creating the most detailed brain maps</h2>
-</div>
-
-<hr class="section-divider">
-
-<!-- Mission section with green background -->
-<div class="mission-section">
-  <div class="mission-content">
-    <div class="section-title-container">
-      <div class="section-title"><span style="color: #4A90E2;">Mission</span></div>
+<div class="mission">
+  <div class="section">
+    <div>
+      <span class="d-eyebrow">Mission</span>
+      <h2>Map the brain. <em>Understand</em> it.</h2>
     </div>
-    <div class="section-content">
-      <p>Humanity doesn't know how the brain works; and thus can't cure, enhance, or imitate it.</p>
-
+    <div>
+      <p class="lead">Humanity doesn't know how the brain works, and so can't cure, enhance, or imitate it.</p>
       <p>We are solving this by creating the most detailed brain maps and using them for brain simulation and diagnosis. Beginning with small organisms, we aim to enable in silico drug development and breakthrough treatments for brain diseases.</p>
     </div>
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="d-divider">
 
-<!-- Approach Section -->
-<div class="centered-section">
-  <div class="centered-title">Approach</div>
-  
-  <div class="backing-boxes">
-    <div class="backing-box">
-      <div class="backing-icon">
-        <img src="/images/micro.svg" width="96" height="96" alt="Microscope icon" style="fill: #4A90E2;">
+<div class="section">
+  <div class="section-head">
+    <span class="d-eyebrow">Approach</span>
+    <h2>From tissue to insight</h2>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <span class="card-num">01</span>
+      <div class="icon-bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 21 21"/><circle cx="8.5" cy="9" r="1.2"/><circle cx="12.5" cy="12" r="1.2"/><path d="M9.4 9.8l2.2 1.4"/></svg>
       </div>
-      <div class="backing-title">Scan</div>
-      <div class="backing-text">
-        To create a digital replica of the brain, we image it at nanometer resolution, capturing structural features down to a synapse. 
-      </div>
-      <div class="backing-preference">
-        <div class="preference-label">Level of resolution:</div>
-        <div class="preference-scale">
-          <div class="scale-bar">
-            <div class="scale-fill" style="width: 90%;"></div>
-          </div>
-          <span>~nm</span>
-        </div>
+      <h3>Scan</h3>
+      <p>We image brain tissue at nanometre resolution, capturing its structure down to individual synapses.</p>
+      <div class="card-meta">
+        Level of resolution
+        <div class="meter"><span style="width: 90%;"></span></div>
+        <div class="meter-label"><span>mm</span><span>~nm</span></div>
       </div>
     </div>
-    
-    <div class="backing-box">
-      <div class="backing-icon">
-        <img src="/images/brain.svg" width="96" height="96" alt="Brain icon" style="fill: #4A90E2;">
+
+    <div class="card">
+      <span class="card-num">02</span>
+      <div class="icon-bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 7.5 12 12 3 7.5Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
       </div>
-      <div class="backing-title">Digitize</div>
-      <div class="backing-text">
-        We then convert the imaging data into a near-identical digital reconstruction of the brain.
-      </div>
-      <div class="backing-preference">
-        <div class="preference-label">Level of biophysical accuracy:</div>
-        <div class="preference-scale">
-          <div class="scale-bar">
-            <div class="scale-fill" style="width: 95%;"></div>
-          </div>
-          <span>Moonshot</span>
-        </div>
+      <h3>Map</h3>
+      <p>We turn the imaging data into the most detailed digital brain maps: every neuron and every connection.</p>
+      <div class="card-meta">
+        Level of biophysical detail
+        <div class="meter"><span style="width: 95%;"></span></div>
+        <div class="meter-label"><span>Wiring</span><span>Moonshot</span></div>
       </div>
     </div>
-    
-    <div class="backing-box">
-      <div class="backing-icon">
-        <img src="/images/brain-net.svg" width="96" height="96" alt="Neural network icon" style="fill: #4A90E2;">
+
+    <div class="card">
+      <span class="card-num">03</span>
+      <div class="icon-bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="11" cy="18" r="2.5"/><circle cx="19.5" cy="18.5" r="1.5"/><path d="M8.4 7.1 15.6 7.6"/><path d="M7.1 8.8l2.7 7"/><path d="M16.6 10.1l-4.3 5.8"/><path d="M13.5 18.2h4.5"/></svg>
       </div>
-      <div class="backing-title">Simulate</div>
-      <div class="backing-text">
-        Lastly, we aim to simulate the brain in different environments; testing drugs, intelligence, and conciouseness of the uploaded mind.
-      </div>
-      <div class="backing-preference">
-        <div class="preference-label">Simulatable Scope:</div>
-        <div class="preference-qualities">
-          <div class="quality-option">Intelligence</div>
-          <div class="quality-option active">Treatments</div>
-          <div class="quality-option">Consciousness</div>
+      <h3>Simulate &amp; diagnose</h3>
+      <p>We run the maps as simulations to test drugs, understand disease and support diagnosis.</p>
+      <div class="card-meta">
+        Applications
+        <div class="chips">
+          <span class="chip is-on">Treatments</span>
+          <span class="chip is-on">Diagnosis</span>
+          <span class="chip">Cognition</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="d-divider">
 
-<!-- Process/Roadmap Section with completely restructured HTML -->
-<div class="centered-section process-section">
-  <div class="centered-title">Our Roadmap</div>
-  
-  <div class="process-timeline-container">
-    <!-- The vertical timeline line -->
-    <div class="timeline-line"></div>
-    
-    <!-- Step 1 content (Left side) -->
-    <div class="timeline-item left">
-      <div class="step-number">Step 1: <span class="step-highlight">Raise Funds</span></div>
-      <div class="step-description">We are building advanced brain mapping technologies to create the most detailed neural reconstructions.</div>
-    </div>
-    
-    <!-- Step 2 content (Right side) -->
-    <div class="timeline-item right">
-      <div class="step-number">Step 2: <span class="step-highlight">Make Breakthroughs</span></div>
-      <div class="step-description">Upload zebra-fish and develop digital drug-like simulations on it.</div>
-    </div>
-    
-    <!-- Step 3 content (Left side) -->
-    <div class="timeline-item left">
-      <div class="step-number">Step 3: <span class="step-highlight">Productionise</span></div>
-      <div class="step-description">Scale our technology to mice and humans and licence it to companies, labs, and drug discovery firms as the first proof of concept.
+<div class="section">
+  <div class="section-head">
+    <span class="d-eyebrow">Roadmap</span>
+    <h2>Where we're going</h2>
+  </div>
+
+  <div class="timeline">
+    <div class="step left">
+      <div class="step-node">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 7.5 12 12 3 7.5Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="d-eyebrow">Step 1</span>
+        <h3>Build the maps</h3>
+        <p>Develop nanometre-scale imaging and reconstruction to produce the most detailed neural maps.</p>
       </div>
     </div>
-    
-    <!-- Icons positioned absolutely with more specific styling -->
-    <div class="step-icon step-icon-1">
-      <img src="/images/dollar.svg" width="75" height="75" alt="Dollar icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
+
+    <div class="step right">
+      <div class="step-node">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="d-eyebrow">Step 2</span>
+        <h3>Make breakthroughs</h3>
+        <p>Map the zebrafish brain end to end and run drug-like simulations on it.</p>
+      </div>
     </div>
-    
-    <div class="step-icon step-icon-2">
-      <img src="/images/idea.svg" width="75" height="75" alt="Idea icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
-    </div>
-    
-    <div class="step-icon step-icon-3">
-      <img src="/images/rocket.svg" width="75" height="75" alt="Rocket icon" style="fill: #4A90E2; width: 75px !important; height: 75px !important; min-width: 75px !important; min-height: 75px !important; max-width: 75px !important; max-height: 75px !important; position: absolute !important; top: calc(50% - 2px) !important; left: 50% !important; transform: translate(-50%, -50%) !important; object-fit: contain !important; padding: 0 !important; margin: 0 !important; display: block !important;">
+
+    <div class="step left">
+      <div class="step-node">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 2.4 4.5 5.9 4.5 9.9l-1.8 3.6H9.3l-1.8-3.6c0-4 1.5-7.5 4.5-9.9Z"/><circle cx="12" cy="9.5" r="1.7"/><path d="M7.6 12.6 5 15.5V19l3.4-2"/><path d="m16.4 12.6 2.6 2.9V19l-3.4-2"/><path d="m10.5 19 1.5 2.5 1.5-2.5"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="d-eyebrow">Step 3</span>
+        <h3>Productionise</h3>
+        <p>Scale to mice and humans, and bring our maps, simulations and diagnostics to labs, clinics and drug-discovery teams.</p>
+      </div>
     </div>
   </div>
-  
-  <div class="funding-container" id="funding-container">
-    <canvas class="neural-canvas" id="neural-canvas"></canvas>
-    <div class="funding-content">
-      <h2 class="funding-title">Get in Touch</h2>
-      <button id="funding-button" class="contact-button" onclick="window.location.href='https://duality.nexus/contact/'">Get in Touch</button>
+</div>
+
+<div class="section" style="padding-top: 20px;">
+  <div class="cta" id="cta">
+    <canvas id="cta-canvas" aria-hidden="true"></canvas>
+    <div class="cta-content">
+      <span class="d-eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+      <p>Working on brain mapping, simulation or diagnosis? We'd love to hear from you.</p>
+      <a class="d-button" id="cta-button" href="/contact/">Contact us</a>
     </div>
   </div>
 </div>
 
-<!-- Green separator before footer -->
-<hr class="section-divider" style="margin-bottom: 0 !important;">
+{% include duality-footer.html %}
 
-<!-- Custom Footer - make sure this is the last element -->
-<div class="custom-footer" style="margin-top: 0 !important; padding-top: 30px;">
-  <div class="footer-content">
-    <div class="footer-logo">Duality</div>
-    <div class="footer-tagline">Bending mind-space</div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/company/brain-duality/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BVmgZIyf4Q8%2BzlYPJgth1pw%3D%3D" class="footer-link">LinkedIn</a>
-      <a href="https://duality.nexus/contact/" class="footer-link">Contact</a>
-      <a href="https://duality.nexus/research" class="footer-link">Research</a>
-    </div>
-    <div class="footer-copyright">© 2025 Duality. All rights reserved.</div>
-  </div>
-</div>
-
-<!-- End of page content - nothing should be after this -->
-
-<!-- Add JavaScript for improved brain pixels effect -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const container = document.getElementById('funding-container');
-  const canvas = document.getElementById('neural-canvas');
-  const button = document.getElementById('funding-button');
+// "Duality" title assembled from palette-coloured circles.
+(function () {
+  const canvas = document.getElementById('title-canvas');
   const ctx = canvas.getContext('2d');
-  
-  // Set canvas size to match container
-  function resizeCanvas() {
-    const rect = container.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-  }
-  
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-  
-  let pixels = [];
-  let isActive = false;
-  let mouseX = 0;
-  let mouseY = 0;
-  let frameCounter = 0;
-  
-  // Get button position
-  let buttonRect = button.getBoundingClientRect();
-  let containerRect = container.getBoundingClientRect();
-  let buttonCenterX = (buttonRect.left + buttonRect.right) / 2 - containerRect.left;
-  let buttonCenterY = (buttonRect.top + buttonRect.bottom) / 2 - containerRect.top;
-  
-  // Update button position on resize
-  window.addEventListener('resize', function() {
-    buttonRect = button.getBoundingClientRect();
-    containerRect = container.getBoundingClientRect();
-    buttonCenterX = (buttonRect.left + buttonRect.right) / 2 - containerRect.left;
-    buttonCenterY = (buttonRect.top + buttonRect.bottom) / 2 - containerRect.top;
-  });
-  
-  // Define multiple shades of blue
-  const blueShades = [
-    '#4A90E2', // Base blue
-    '#3A7BC8', // Darker blue
-    '#5BA3FF', // Lighter blue
-    '#2A6BAE', // Much darker blue
-    '#6BB5FF'  // Much lighter blue
-  ];
-  
-  // Pixel class
-  class Pixel {
-    constructor(x, y, fromButton = false) {
-      this.x = x;
-      this.y = y;
-      this.originX = x;
-      this.originY = y;
-      this.fromButton = fromButton; // Track if this pixel is from button
-      
-      // Make pixels 25% larger (already done)
-      this.originalSize = (Math.random() * 3 + 2) * 1.25 * 1.25;
-      this.size = this.originalSize;
-      
-      // If from button, adjust speed direction to emanate outward
-      if (fromButton) {
-        // Generate angle around the circle
-        const angle = Math.random() * Math.PI * 2;
-        // Create velocity vector pointing outward
-        const speed = Math.random() * 0.5 + 0.25; // Lower speed for button pixels
-        this.speedX = Math.cos(angle) * speed;
-        this.speedY = Math.sin(angle) * speed;
-      } else {
-        // Regular mouse pixels
-        this.speedX = (Math.random() * 2 - 1) * 0.75;
-        this.speedY = (Math.random() * 2 - 1) * 0.75;
-      }
-      
-      this.life = 120 + Math.random() * 80;
-      this.color = blueShades[Math.floor(Math.random() * blueShades.length)];
-      this.alpha = fromButton ? 0 : 1; // Start invisible if from button
-    }
-    
-    // Update pixel position
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      
-      // Calculate distance from origin
-      const dx = this.x - this.originX;
-      const dy = this.y - this.originY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      
-      // Button pixels appear after moving away from center
-      if (this.fromButton) {
-        // Fade in as they move away from the button
-        if (distance < 20) {
-          this.alpha = Math.min(1, distance / 20) * (this.life / 150);
-        } else {
-          this.alpha = this.life / 150;
-        }
-      } else {
-        this.alpha = this.life / 150;
-      }
-      
-      // Shrink size based on distance from origin
-      const minSizeFactor = 0.4;
-      const maxDistance = 100;
-      const sizeFactor = 1 - ((1 - minSizeFactor) * Math.min(distance, maxDistance) / maxDistance);
-      this.size = this.originalSize * sizeFactor;
-      
-      this.life--;
-    }
-    
-    // Draw pixel
-    draw() {
-      ctx.globalAlpha = this.alpha;
-      ctx.fillStyle = this.color;
-      ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
-      ctx.globalAlpha = 1;
-    }
-  }
-  
-  // Animation function to create and update pixels
-  function updatePixels() {
-    // Clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // Add new pixels when active
-    if (isActive) {
-      // Create mouse follower pixels - slowed down by 25% (from 3 to 4 frames)
-      if (frameCounter % 4 === 0) { // Increased from 3 to 4 to slow down
-        pixels.push(new Pixel(mouseX, mouseY));
-      }
-    }
-    
-    // Create button pixels periodically - sped up by 25%
-    if (frameCounter % 11 === 0) { // Decreased from 15 to 11 to speed up
-      for (let i = 0; i < 3; i++) {
-        pixels.push(new Pixel(buttonCenterX, buttonCenterY, true));
-      }
-    }
-    
-    // Update and draw each pixel
-    for (let i = 0; i < pixels.length; i++) {
-      pixels[i].update();
-      
-      // Draw connecting lines between nearby pixels
-      for (let j = i + 1; j < pixels.length; j++) {
-        const dx = pixels[i].x - pixels[j].x;
-        const dy = pixels[i].y - pixels[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        // Connect pixels that are close to each other
-        if (distance < 80) {
-          const alpha = Math.min(pixels[i].alpha, pixels[j].alpha) * (1 - distance / 80);
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(74, 144, 226, ${alpha * 0.5})`;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(pixels[i].x, pixels[i].y);
-          ctx.lineTo(pixels[j].x, pixels[j].y);
-          ctx.stroke();
-        }
-      }
-      
-      // Draw the pixel
-      pixels[i].draw();
-      
-      // Remove pixels that are dead
-      if (pixels[i].life <= 0) {
-        pixels.splice(i, 1);
-        i--;
-      }
-    }
-    
-    frameCounter++;
-    requestAnimationFrame(updatePixels);
-  }
-  
-  // Add click event to button for burst effect
-  button.addEventListener('click', function() {
-    // Create a burst of pixels from the button
-    for (let i = 0; i < 20; i++) {
-      pixels.push(new Pixel(buttonCenterX, buttonCenterY, true));
-    }
-  });
-  
-  // Track mouse movement inside the funding container
-  container.addEventListener('mousemove', function(e) {
-    const rect = container.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
-    isActive = true;
-  });
-  
-  container.addEventListener('mouseleave', function() {
-    isActive = false;
-  });
-  
-  // Start the animation
-  updatePixels();
-});
-</script>
+  const TEXT = 'Duality';
+  const FONT = 'Fraunces, Georgia, serif';
+  // Mostly blue with golden accents, like the reference neurons.
+  const COLORS = ['#4F8CF7', '#4F8CF7', '#4F8CF7', '#3B74E6', '#2D5FD8', '#6FA2FA', '#F4CA9B', '#E7AE72'];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-<!-- Add this script before the closing </div> at the end of the page -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Ensure font is loaded before starting animation
-  function waitForFontLoad() {
-    return new Promise((resolve) => {
-      // Use FontFace API to properly detect when custom font is loaded
-      if (document.fonts) {
-        document.fonts.ready.then(() => {
-          // Additional timeout to ensure the font is applied
-          setTimeout(resolve, 100);
-        });
-      } else {
-        // Fallback for browsers without font loading API
-        setTimeout(resolve, 500);
+  let dots = [];
+  let width = 0;
+  let height = 0;
+  let startTime = 0;
+  let assembled = false;
+  let pointer = null;
+  let running = false;
+
+  function sampleTargets() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rect = canvas.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const off = document.createElement('canvas');
+    off.width = Math.ceil(width);
+    off.height = Math.ceil(height);
+    const o = off.getContext('2d');
+    let size = height * 0.78;
+    o.font = '700 ' + size + 'px ' + FONT;
+    const measured = o.measureText(TEXT).width;
+    if (measured > width * 0.9) size *= (width * 0.9) / measured;
+    const step = Math.max(3, Math.round(size / 36));
+    o.font = '700 ' + size + 'px ' + FONT;
+    o.textAlign = 'center';
+    o.textBaseline = 'middle';
+    o.fillText(TEXT, width / 2, height * 0.44);
+    // Thicken hairline serifs so thin strokes still get a row of circles.
+    o.lineWidth = step * 1.1;
+    o.lineJoin = 'round';
+    o.strokeText(TEXT, width / 2, height * 0.44);
+    const data = o.getImageData(0, 0, off.width, off.height).data;
+    const targets = [];
+    let row = 0;
+    for (let y = Math.floor(step / 2); y < off.height; y += step * 0.87, row++) {
+      const yi = Math.round(y);
+      for (let x = (row % 2 ? step : step / 2); x < off.width; x += step) {
+        const xi = Math.round(x);
+        if (data[(yi * off.width + xi) * 4 + 3] > 140) targets.push([xi, yi]);
       }
+    }
+    return { targets: targets, step: step };
+  }
+
+  function build(settled) {
+    const sampled = sampleTargets();
+    const step = sampled.step;
+    dots = sampled.targets.map(function (t) {
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 12 + Math.pow(Math.random(), 2.4) * width * 0.6;
+      return {
+        tx: t[0],
+        ty: t[1],
+        sx: settled ? t[0] : t[0] + Math.cos(angle) * dist,
+        sy: settled ? t[1] : t[1] + Math.sin(angle) * dist * 0.7,
+        ox: 0,
+        oy: 0,
+        r: step * 0.38 * (0.75 + Math.random() * 0.45),
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        delay: settled ? 0 : Math.random() * 700,
+        dur: settled ? 0 : 1900 + Math.random() * 1500
+      };
     });
   }
 
-  // Title animation
-  const titleAnimator = (function() {
-    const canvas = document.getElementById('title-canvas');
-    const ctx = canvas.getContext('2d');
-    const titleElement = document.querySelector('.header-title');
-    const subtitleElement = document.querySelector('.header-subtitle');
-    
-    // Particles array
-    let particles = [];
-    let titleText = "Duality";
-    let titlePixels = [];
-    let animationComplete = false;
-    let canvasWidth, canvasHeight;
-    let aspectRatio = 0; // Store the aspect ratio of the text
-    
-    // Use only blue colors with slight variations for depth
-    const colors = [
-      '#4A90E2', // Base blue - primary color
-      '#4A90E2', // Used multiple times to increase probability
-      '#4A90E2',
-      '#4A90E2',
-      '#4A90E2',
-      '#3A7BC8', // Darker blue variation
-      '#5BA3FF'  // Lighter blue variation
-    ];
-    
-    function init() {
-      // Set canvas size based on container size
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-      
-      // Wait for font to load before getting title pixels
-      waitForFontLoad().then(getTitlePixels);
+  function frame(now) {
+    if (!startTime) startTime = now;
+    const t = now - startTime;
+    ctx.clearRect(0, 0, width, height);
+    let moving = false;
+
+    for (let i = 0; i < dots.length; i++) {
+      const d = dots[i];
+      const p = d.dur ? Math.min(1, Math.max(0, (t - d.delay) / d.dur)) : 1;
+      if (p < 1) moving = true;
+      const e = 1 - Math.pow(1 - p, 3);
+      let x = d.sx + (d.tx - d.sx) * e;
+      let y = d.sy + (d.ty - d.sy) * e;
+
+      // Once assembled, circles shy away from the pointer and drift back.
+      if (assembled) {
+        let fx = 0;
+        let fy = 0;
+        if (pointer) {
+          const dx = d.tx - pointer.x;
+          const dy = d.ty - pointer.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 70 && dist > 0.01) {
+            const push = (1 - dist / 70) * 16;
+            fx = (dx / dist) * push;
+            fy = (dy / dist) * push;
+          }
+        }
+        d.ox += (fx - d.ox) * 0.15;
+        d.oy += (fy - d.oy) * 0.15;
+        if (Math.abs(d.ox) > 0.05 || Math.abs(d.oy) > 0.05) moving = true;
+        x += d.ox;
+        y += d.oy;
+      }
+
+      ctx.globalAlpha = Math.min(1, 0.15 + p * 1.4);
+      ctx.fillStyle = d.color;
+      ctx.beginPath();
+      ctx.arc(x, y, d.r, 0, Math.PI * 2);
+      ctx.fill();
     }
-    
-    function resizeCanvas() {
-      const container = canvas.parentElement;
-      const rect = container.getBoundingClientRect();
-      
-      // Set canvas dimensions to match container
-      canvas.width = rect.width;
-      canvas.height = rect.height;
-      canvasWidth = canvas.width;
-      canvasHeight = canvas.height;
-      
-      // If we already have title pixels, recapture them at new size
-      if (titlePixels.length > 0 && !animationComplete) {
-        getTitlePixels();
+    ctx.globalAlpha = 1;
+
+    if (!assembled && !moving) assembled = true;
+    if (moving || pointer) {
+      requestAnimationFrame(frame);
+    } else {
+      running = false;
+    }
+  }
+
+  function run() {
+    if (running) return;
+    running = true;
+    requestAnimationFrame(frame);
+  }
+
+  function start() {
+    build(reduceMotion);
+    if (reduceMotion) assembled = true;
+    run();
+  }
+
+  canvas.addEventListener('pointermove', function (e) {
+    if (!assembled) return;
+    const rect = canvas.getBoundingClientRect();
+    pointer = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    run();
+  });
+  canvas.addEventListener('pointerleave', function () {
+    pointer = null;
+    run();
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      if (Math.abs(canvas.getBoundingClientRect().width - width) < 1) return;
+      build(assembled);
+      run();
+    }, 150);
+  });
+
+  const fontReady = document.fonts
+    ? document.fonts.load('600 100px Fraunces').then(function () { return document.fonts.ready; })
+    : Promise.resolve();
+  Promise.race([fontReady, new Promise(function (r) { setTimeout(r, 2500); })]).then(start);
+})();
+
+// Contact card: circles drift out of the button and trail the pointer.
+(function () {
+  const box = document.getElementById('cta');
+  const canvas = document.getElementById('cta-canvas');
+  const button = document.getElementById('cta-button');
+  const ctx = canvas.getContext('2d');
+  const COLORS = ['#4F8CF7', '#3B74E6', '#6FA2FA', '#F4CA9B', '#E7AE72'];
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let particles = [];
+  let pointer = null;
+  let tick = 0;
+  let width = 0;
+  let height = 0;
+  let origin = { x: 0, y: 0 };
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rect = box.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const b = button.getBoundingClientRect();
+    origin = { x: b.left + b.width / 2 - rect.left, y: b.top + b.height / 2 - rect.top };
+  }
+
+  function spawn(x, y, fromButton) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = fromButton ? 0.25 + Math.random() * 0.45 : 0.2 + Math.random() * 0.6;
+    particles.push({
+      x: x,
+      y: y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      r: 1.6 + Math.random() * 2.6,
+      life: 150 + Math.random() * 90,
+      max: 240,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)]
+    });
+  }
+
+  function frame() {
+    ctx.clearRect(0, 0, width, height);
+    if (tick % 12 === 0) for (let i = 0; i < 2; i++) spawn(origin.x, origin.y, true);
+    if (pointer && tick % 4 === 0) spawn(pointer.x, pointer.y, false);
+    tick++;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+      p.alpha = Math.max(0, p.life / p.max);
+    }
+    particles = particles.filter(function (p) { return p.life > 0; });
+
+    ctx.lineWidth = 0.6;
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 70) {
+          ctx.strokeStyle = 'rgba(79, 140, 247, ' + (Math.min(particles[i].alpha, particles[j].alpha) * (1 - dist / 70) * 0.45) + ')';
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
       }
     }
-    
-    function measureTextDimensions(text, font) {
-      // Create off-screen canvas for measuring
-      const measureCanvas = document.createElement('canvas');
-      const measureCtx = measureCanvas.getContext('2d');
-      measureCanvas.width = 2000; // Large enough to fit any text
-      measureCanvas.height = 500;
-      
-      // Set font and render text
-      measureCtx.font = font;
-      measureCtx.fillStyle = 'white';
-      measureCtx.textAlign = 'left';
-      measureCtx.textBaseline = 'top';
-      measureCtx.fillText(text, 0, 0);
-      
-      // Find bounds of text
-      const data = measureCtx.getImageData(0, 0, measureCanvas.width, measureCanvas.height).data;
-      let left = measureCanvas.width, right = 0, top = measureCanvas.height, bottom = 0;
-      
-      // Find the bounds by looking for non-transparent pixels
-      for (let y = 0; y < measureCanvas.height; y++) {
-        for (let x = 0; x < measureCanvas.width; x++) {
-          const alpha = data[(y * measureCanvas.width + x) * 4 + 3];
-          if (alpha > 0) {
-            left = Math.min(left, x);
-            right = Math.max(right, x);
-            top = Math.min(top, y);
-            bottom = Math.max(bottom, y);
-          }
-        }
-      }
-      
-      return {
-        width: right - left,
-        height: bottom - top
-      };
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
     }
-    
-    function getTitlePixels() {
-      // Clear previous pixels
-      titlePixels = [];
-      
-      // Get original title style
-      const computedStyle = window.getComputedStyle(titleElement);
-      const fontSize = parseInt(computedStyle.fontSize);
-      const fontFamily = computedStyle.fontFamily;
-      
-      // Measure the text dimensions to maintain aspect ratio
-      const textDimensions = measureTextDimensions(titleText, `bold ${fontSize}px ${fontFamily}`);
-      aspectRatio = textDimensions.width / textDimensions.height;
-      
-      // Calculate scaled font size to maintain proportions
-      // For mobile, ensure height is proportional to width
-      let adjustedFontSize = fontSize;
-      if (window.innerWidth < 768) {
-        // Calculate font size based on container width to maintain aspect ratio
-        const containerWidth = canvasWidth * 0.8; // Use 80% of available width
-        const idealHeight = containerWidth / aspectRatio;
-        adjustedFontSize = (idealHeight / textDimensions.height) * fontSize;
-      }
-      
-      // Configure the canvas for precise text rendering
-      ctx.font = `bold ${adjustedFontSize}px ${fontFamily}`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.imageSmoothingEnabled = true;
-      ctx.imageSmoothingQuality = 'high';
-      
-      // Calculate exact position to match original
-      const textX = canvasWidth / 2;
-      const textY = canvasHeight / 2;
-      
-      // Render text on canvas to get pixel data
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      ctx.fillStyle = '#4A90E2'; // Set text to exact blue
-      ctx.fillText(titleText, textX, textY);
-      
-      // Get the pixel data
-      const imageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
-      const pixels = imageData.data;
-      
-      // Increase sampling size to create natural gaps between pixels
-      const sampleSize = 3; // Increased from 2 to 3 for more visible gaps
-      
-      for (let y = 0; y < canvasHeight; y += sampleSize) {
-        for (let x = 0; x < canvasWidth; x += sampleSize) {
-          const i = (y * canvasWidth + x) * 4;
-          // If the pixel has any opacity (part of the text)
-          if (pixels[i + 3] > 50) {
-            titlePixels.push({
-              x: x,
-              y: y,
-              color: getRandomColor(),
-              size: 2.2 // Make pixel slightly smaller than the sampling size
-            });
-          }
-        }
-      }
-      
-      // Clear canvas
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      
-      // Optimized particle initialization with nearest-available-target assignment
-      particles = (function() {
-        // Pre-calculate some constants to avoid repeating calculations
-        const maxDistance = Math.max(canvasWidth, canvasHeight) * 0.4;
-        const concentrationFactor = 6;
-        
-        // Create a copy of target positions that we can modify
-        const availableTargets = titlePixels.map(pixel => ({
-          x: pixel.x,
-          y: pixel.y,
-          taken: false
-        }));
-        
-        // Generate fewer starting positions with concentration as before
-        // Process in smaller batches to reduce initial delay
-        const result = [];
-        const batchSize = 100; // Process in batches to prevent UI freezing
-        
-        // Initialize the first batch immediately to start animation
-        const initialBatch = Math.min(batchSize, titlePixels.length);
-        
-        // Generate initial positions for first batch
-        for (let i = 0; i < initialBatch; i++) {
-          const attractorIndex = Math.floor(Math.random() * titlePixels.length);
-          const attractorX = titlePixels[attractorIndex].x;
-          const attractorY = titlePixels[attractorIndex].y;
-          
-          const angle = Math.random() * Math.PI * 2;
-          
-          // Simplified distance calculation with fewer branches
-          const u = Math.random();
-          const distance = u < 0.85 ? 
-            (canvasWidth * 0.25) * Math.pow(u, concentrationFactor) :
-            maxDistance * Math.pow(u, 3);
-          
-          // Calculate initial position
-          const initialX = attractorX + Math.cos(angle) * distance;
-          const initialY = attractorY + Math.sin(angle) * distance;
-          
-          // Wrap coordinates around canvas
-          const wrappedX = ((initialX % canvasWidth) + canvasWidth) % canvasWidth;
-          const wrappedY = ((initialY % canvasHeight) + canvasHeight) % canvasHeight;
-          
-          // Find nearest available target (simplified algorithm)
-          let closestIndex = 0;
-          let closestDistance = Number.MAX_VALUE;
-          
-          // Check only a subset of targets for efficiency
-          for (let j = 0; j < availableTargets.length; j++) {
-            if (availableTargets[j].taken) continue;
-            
-            // Use Manhattan distance for faster calculation (instead of Euclidean)
-            const dx = Math.abs(wrappedX - availableTargets[j].x);
-            const dy = Math.abs(wrappedY - availableTargets[j].y);
-            const distance = dx + dy; // Manhattan distance
-            
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestIndex = j;
-            }
-          }
-          
-          // Mark this target as taken
-          availableTargets[closestIndex].taken = true;
-          
-          // Calculate appropriate speed for 2.5 seconds
-          const targetFrames = 400 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
-          const calculatedSpeed = (closestDistance / targetFrames) + 0.4; // Adjusted minimum speed
-          
-          // Create the particle with its assigned target
-          result.push({
-            targetX: availableTargets[closestIndex].x,
-            targetY: availableTargets[closestIndex].y,
-            x: wrappedX,
-            y: wrappedY,
-            color: titlePixels[i].color,
-            size: titlePixels[i].size,
-            speed: calculatedSpeed,
-            arrived: false,
-            visible: true,
-            initialDelay: Math.floor(Math.random() * 10) // Shorter initial delay
-          });
-        }
-        
-        // Process remaining particles in the background
-        if (titlePixels.length > initialBatch) {
-          setTimeout(() => {
-            for (let i = initialBatch; i < titlePixels.length; i++) {
-              // Similar logic as above but for remaining particles
-              // Process in batches to prevent UI freezing
-              if ((i - initialBatch) % batchSize === 0 && i > initialBatch) {
-                setTimeout(() => { processRemainingBatch(i); }, 0);
-              } else {
-                processParticle(i);
-              }
-            }
-          }, 0);
-        }
-        
-        function processRemainingBatch(startIndex) {
-          const endIndex = Math.min(startIndex + batchSize, titlePixels.length);
-          for (let i = startIndex; i < endIndex; i++) {
-            processParticle(i);
-          }
-        }
-        
-        function processParticle(index) {
-          // Same particle creation logic as above
-          // Simplified implementation
-          const attractorIndex = Math.floor(Math.random() * titlePixels.length);
-          const attractorX = titlePixels[attractorIndex].x;
-          const attractorY = titlePixels[attractorIndex].y;
-          
-          const angle = Math.random() * Math.PI * 2;
-          const u = Math.random();
-          const distance = u < 0.85 ? 
-            (canvasWidth * 0.25) * Math.pow(u, concentrationFactor) :
-            maxDistance * Math.pow(u, 3);
-          
-          const initialX = attractorX + Math.cos(angle) * distance;
-          const initialY = attractorY + Math.sin(angle) * distance;
-          
-          const wrappedX = ((initialX % canvasWidth) + canvasWidth) % canvasWidth;
-          const wrappedY = ((initialY % canvasHeight) + canvasHeight) % canvasHeight;
-          
-          // Find nearest available target
-          let closestIndex = 0;
-          let closestDistance = Number.MAX_VALUE;
-          
-          for (let j = 0; j < availableTargets.length; j++) {
-            if (availableTargets[j].taken) continue;
-            
-            const dx = Math.abs(wrappedX - availableTargets[j].x);
-            const dy = Math.abs(wrappedY - availableTargets[j].y);
-            const distance = dx + dy;
-            
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestIndex = j;
-            }
-          }
-          
-          availableTargets[closestIndex].taken = true;
-          
-          const travelDistance = closestDistance;
-          const targetFrames = 340 + Math.floor(Math.random() * 20); // 140-160 frames (2.33-2.67s)
-          const calculatedSpeed = (travelDistance / targetFrames) + 0.4; // Adjusted minimum speed
-          
-          result.push({
-            targetX: availableTargets[closestIndex].x,
-            targetY: availableTargets[closestIndex].y,
-            x: wrappedX,
-            y: wrappedY,
-            color: titlePixels[index].color,
-            size: titlePixels[index].size,
-            speed: calculatedSpeed,
-            arrived: false,
-            visible: true,
-            initialDelay: Math.floor(Math.random() * 10)
-          });
-        }
-        
-        return result;
-      })();
-      
-      // Start animation
-      animate();
-    }
-    
-    function getRandomColor() {
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-    
-    function animate() {
-      if (animationComplete) return;
-      
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      
-      let allArrived = true;
-      
-      // Update and draw particles
-      particles.forEach(particle => {
-        // Handle visibility delay
-        if (!particle.visible) {
-          if (particle.visibilityDelay > 0) {
-            particle.visibilityDelay--;
-          } else {
-            particle.visible = true;
-          }
-          allArrived = false;
-          return;
-        }
-        
-        // Handle initial movement delay
-        if (particle.initialDelay > 0) {
-          particle.initialDelay--;
-          allArrived = false;
-          return;
-        }
-        
-        // Move particle
-        if (!particle.arrived) {
-          // Calculate distance to target
-          const dx = particle.targetX - particle.x;
-          const dy = particle.targetY - particle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          // If close enough to target, snap to exact target position
-          if (distance < particle.speed) {
-            particle.x = particle.targetX;
-            particle.y = particle.targetY;
-            particle.arrived = true;
-          } else {
-            // Move towards target
-            const angle = Math.atan2(dy, dx);
-            particle.x += Math.cos(angle) * particle.speed;
-            particle.y += Math.sin(angle) * particle.speed;
-            allArrived = false;
-          }
-        }
-        
-        // Draw particle - ensure exact pixel positioning
-        if (particle.visible) {
-          ctx.fillStyle = particle.color;
-          const size = particle.size;
-          const x = Math.round(particle.x - size/2);
-          const y = Math.round(particle.y - size/2);
-          ctx.fillRect(x, y, size, size);
-        }
-      });
-      
-      // Check if animation is complete
-      if (allArrived) {
-        animationComplete = true;
-        
-        // Create permanent image from the canvas
-        const finalImage = new Image();
-        finalImage.src = canvas.toDataURL('image/png');
-        
-        // Once image is loaded, replace canvas with image
-        finalImage.onload = function() {
-          // Create a permanent container for the image
-          const permanentContainer = document.createElement('div');
-          permanentContainer.style.position = 'absolute';
-          permanentContainer.style.top = '0';
-          permanentContainer.style.left = '0';
-          permanentContainer.style.width = '100%';
-          permanentContainer.style.height = '100%';
-          permanentContainer.style.zIndex = '2';
-          
-          // Add the final image to the container
-          permanentContainer.appendChild(finalImage);
-          finalImage.style.width = '100%';
-          finalImage.style.height = '100%';
-          
-          // Add the container to the canvas parent
-          canvas.parentElement.appendChild(permanentContainer);
-          
-          // Hide the original canvas
-          canvas.style.display = 'none';
-        };
-      } else {
-        requestAnimationFrame(animate);
-      }
-    }
-    
-    return {
-      init: init
-    };
-  })();
-  
-  // Initialize title animation
-  titleAnimator.init();
-  
-  // Rest of your existing DOM content loaded code
-  const container = document.getElementById('funding-container');
-  // ... existing code ...
-});
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+
+  box.addEventListener('pointermove', function (e) {
+    const rect = box.getBoundingClientRect();
+    pointer = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  });
+  box.addEventListener('pointerleave', function () { pointer = null; });
+  button.addEventListener('click', function () {
+    for (let i = 0; i < 24; i++) spawn(origin.x, origin.y, true);
+  });
+  window.addEventListener('resize', resize);
+  resize();
+  requestAnimationFrame(frame);
+})();
 </script>
-
-
-
-
-

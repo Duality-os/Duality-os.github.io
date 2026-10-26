@@ -1,0 +1,8 @@
+<nav class="d-nav" aria-label="Main">
+  <a class="d-nav-mark{% if include.active == 'home' %} is-hidden{% endif %}" href="/">Duality</a>
+  <div class="d-nav-links">
+    <a href="/"{% if include.active == 'home' %} class="is-active"{% endif %}>Home</a>
+    <a href="/research/"{% if include.active == 'research' %} class="is-active"{% endif %}>Research</a>
+    <a href="/contact/" class="d-nav-cta">Contact</a>
+  </div>
+</nav>

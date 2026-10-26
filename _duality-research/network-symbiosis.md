@@ -21,7 +21,7 @@ Hitherto, interpreting and steering AIs has mainly been done through two key len
   <p><b>Figure 1:</b> SymbioteNet (left) steering the primary neural network (right) by interacting with it's weights and observing it's outputs</p>
 </div>
 
-<hr style="border-top: 1px solid black;">
+<hr>
 
 
 
@@ -39,7 +39,7 @@ The Primary network is trained to map input to output as per usual, whilst the S
 <h4 style="margin-bottom: 0"><u>2.2 Example </u></h4>
 A simple example would illustrate the concept. Like in Figure 1, say we're training a classic MNIST CNN to classify digits 1-10. Once we've trained the Primary CNN, we would then train a SymbioteNet by feeding in a digit we would like the Primary network to misclassify and backpropagate the error depending on how well it managed to inhibit the digit (by inhibiting all the CNN's neurons apart from the ones in the first and last layers). An important detail is that the cross-entropy loss should punish the model for misclassifying ALL digits and instead be rewarded if it classifies them all correctly except for the undesired digit. 
 
-<hr style="border-top: 1px solid black;">
+<hr>
 
 
 
@@ -57,7 +57,7 @@ Analogous features and circuits form across models and tasks. Can SymbioteNet re
 
 These claims have been shown to be true across the networks, even though by causation and with low degrees of success. SymbioteNet tries solving exactly that.
 
-<hr style="border-top: 1px solid black;">
+<hr>
 
 <h3 align="center">4. Experiment </h3>
 <h4 style="margin-bottom: 0"><u>4.1 Basics </u></h4>
@@ -87,7 +87,7 @@ Importantly, SymbioteNet is made two times smaller than the Primary network, suc
 
 As seen in the confusion matrix, after training, SymbioteNet managed to prevent the Primary model from classifying 100% of the digits 3 from an equal data distribution. Combined with the loss observations, and equally spreading the model's capacity to inhibit the weights across layers with the exclusion of the first and last, the only reasonable deduction is that SymbioteNet has learned the intrinsic representations of both features and circuits.
 
-<hr style="border-top: 1px solid black;">
+<hr>
 
 <h3 align="center">5. Future Work </h3>
 This brief study has just scratched the surface of symbiotic networks. The next steps in the inquiry are rooted in scaling this approach to much larger models, such as transformers, as though our mimicry of polysemanticity is representative of larger networks, transformers encode information in a different dimension of complexity. If successfully scaled to transformers, it's evident that network symbiosis would make for a new way to interpret and steer models. 
