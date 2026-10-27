@@ -64,8 +64,8 @@ hidden: true
 
   /* Top-left neuron from neuron.png, flipped, tucked into the top-left corner. */
   .corner-neuron.tl {
-    left: 70px;
-    top: 78px;
+    left: 100px;
+    top: 120px;
     width: 190px;
     transform-origin: 44.6% 46%;
     transform: translate(-44.6%, -46%) scaleY(-1);
@@ -75,11 +75,11 @@ hidden: true
      and below the navigation. */
   .corner-neuron.tr {
     left: calc(100% - 26px);
-    top: 200px;
+    top: 400px;
     width: auto;
     height: 58vh;
     transform-origin: 52.8% 61.6%;
-    transform: translate(-52.8%, -61.6%) rotate(30deg);
+    transform: translate(-52.8%, -61.6%) rotate(10deg);
   }
 
   #title-canvas {
@@ -435,14 +435,14 @@ hidden: true
     }
 
     .corner-neuron.tl {
-      left: 44px;
-      top: 54px;
+      left: 64px;
+      top: 78px;
       width: 120px;
     }
 
     .corner-neuron.tr {
-      top: 150px;
-      height: 34vh;
+      top: 250px;
+      height: 28vh;
     }
 
     .timeline::before {
