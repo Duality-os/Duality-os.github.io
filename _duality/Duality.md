@@ -60,7 +60,7 @@ hidden: true
     height: auto;
     max-width: none;
     z-index: -1;
-    transform: translateX(22%) rotate(-12deg);
+    transform: translateX(44%) rotate(-42deg);
     pointer-events: none;
     user-select: none;
   }
