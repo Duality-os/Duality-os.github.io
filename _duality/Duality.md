@@ -79,7 +79,7 @@ hidden: true
     width: auto;
     height: 58vh;
     transform-origin: 52.8% 61.6%;
-    transform: translate(-52.8%, -61.6%) rotate(15deg);
+    transform: translate(-52.8%, -61.6%) rotate(20deg);
   }
 
   #title-canvas {
