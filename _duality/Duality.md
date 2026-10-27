@@ -51,18 +51,35 @@ hidden: true
     text-align: center;
   }
 
-  /* The top-left neuron from neuron.png, protruding from the top-right corner. */
+  /* Corner neurons are anchored by their cell body (the transform-origin),
+     which is placed at the left/top coordinates. */
   .corner-neuron {
     position: absolute;
-    top: 92px;
-    right: 0;
-    width: 238px;
     height: auto;
     max-width: none;
     z-index: -1;
-    transform: translateX(44%) rotate(-42deg);
     pointer-events: none;
     user-select: none;
+  }
+
+  /* Top-left neuron from neuron.png, flipped, tucked into the top-left corner. */
+  .corner-neuron.tl {
+    left: 70px;
+    top: 78px;
+    width: 190px;
+    transform-origin: 44.6% 46%;
+    transform: translate(-44.6%, -46%) scaleY(-1);
+  }
+
+  /* Top-right neuron from neuron.png, its cell body just inside the right edge
+     and below the navigation. */
+  .corner-neuron.tr {
+    left: calc(100% - 26px);
+    top: 200px;
+    width: auto;
+    height: 58vh;
+    transform-origin: 52.8% 61.6%;
+    transform: translate(-52.8%, -61.6%) rotate(30deg);
   }
 
   #title-canvas {
@@ -417,9 +434,15 @@ hidden: true
       opacity: 0.8;
     }
 
-    .corner-neuron {
-      top: 72px;
-      width: 150px;
+    .corner-neuron.tl {
+      left: 44px;
+      top: 54px;
+      width: 120px;
+    }
+
+    .corner-neuron.tr {
+      top: 150px;
+      height: 34vh;
     }
 
     .timeline::before {
@@ -462,7 +485,8 @@ hidden: true
 
 <section class="hero">
   <img class="hero-neuron" src="/images/neuron-hero.webp" alt="" aria-hidden="true">
-  <img class="corner-neuron" src="/images/neuron-small.webp" alt="" aria-hidden="true">
+  <img class="corner-neuron tl" src="/images/neuron-small.webp" alt="" aria-hidden="true">
+  <img class="corner-neuron tr" src="/images/neuron-tr.webp" alt="" aria-hidden="true">
   <div class="hero-inner">
     <h1 class="visually-hidden">Duality</h1>
     <canvas id="title-canvas" aria-hidden="true"></canvas>
