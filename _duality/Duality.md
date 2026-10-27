@@ -54,13 +54,13 @@ hidden: true
   /* The top-left neuron from neuron.png, protruding from the top-right corner. */
   .corner-neuron {
     position: absolute;
-    top: 0;
+    top: 92px;
     right: 0;
     width: 238px;
     height: auto;
     max-width: none;
     z-index: -1;
-    transform: translate(16%, -14%) rotate(-12deg);
+    transform: translateX(22%) rotate(-12deg);
     pointer-events: none;
     user-select: none;
   }
@@ -418,6 +418,7 @@ hidden: true
     }
 
     .corner-neuron {
+      top: 72px;
       width: 150px;
     }
 
