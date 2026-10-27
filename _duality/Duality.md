@@ -34,27 +34,49 @@ hidden: true
   .hero-neuron {
     position: absolute;
     left: 0;
-    bottom: -9vh;
-    height: 104vh;
+    bottom: -5vh;
+    height: 58vh;
     width: auto;
     max-width: none;
     z-index: -1;
     transform-origin: 50% 100%;
-    transform: translateX(-50%) rotate(14deg);
+    transform: translateX(-50%) rotate(10deg);
     animation: neuron-sway 11s ease-in-out infinite alternate;
     pointer-events: none;
     user-select: none;
   }
 
   @keyframes neuron-sway {
-    from { transform: translateX(-50%) rotate(12deg); }
-    to   { transform: translateX(-50%) rotate(16deg); }
+    from { transform: translateX(-50%) rotate(8deg); }
+    to   { transform: translateX(-50%) rotate(12deg); }
   }
 
   .hero-inner {
     width: min(1100px, 100%);
     padding: 0 24px;
     text-align: center;
+  }
+
+  .title-wrap {
+    position: relative;
+  }
+
+  /* The top-left neuron from neuron.png, perched above the end of the word. */
+  .title-neuron {
+    position: absolute;
+    left: calc(50% + 312px);
+    top: -96px;
+    width: 190px;
+    height: auto;
+    max-width: none;
+    pointer-events: none;
+    user-select: none;
+    animation: neuron-float 9s ease-in-out infinite alternate;
+  }
+
+  @keyframes neuron-float {
+    from { transform: translateY(0) rotate(-6deg); }
+    to   { transform: translateY(-10px) rotate(6deg); }
   }
 
   #title-canvas {
@@ -404,10 +426,15 @@ hidden: true
     }
 
     .hero-neuron {
-      height: 76vh;
-      bottom: -8vh;
-      margin-left: -14vw;
-      opacity: 0.45;
+      height: 40vh;
+      bottom: -4vh;
+      opacity: 0.8;
+    }
+
+    .title-neuron {
+      left: calc(50% + 95px);
+      top: -58px;
+      width: 96px;
     }
 
     .timeline::before {
@@ -441,6 +468,7 @@ hidden: true
 
   @media (prefers-reduced-motion: reduce) {
     .hero-neuron,
+    .title-neuron,
     .hero-scroll::after {
       animation: none;
     }
@@ -453,7 +481,10 @@ hidden: true
   <img class="hero-neuron" src="/images/neuron-hero.webp" alt="" aria-hidden="true">
   <div class="hero-inner">
     <h1 class="visually-hidden">Duality</h1>
-    <canvas id="title-canvas" aria-hidden="true"></canvas>
+    <div class="title-wrap">
+      <img class="title-neuron" src="/images/neuron-small.webp" alt="" aria-hidden="true">
+      <canvas id="title-canvas" aria-hidden="true"></canvas>
+    </div>
     <p class="hero-tagline">Creating the most detailed <strong>brain maps</strong></p>
   </div>
   <div class="hero-scroll" aria-hidden="true"></div>
