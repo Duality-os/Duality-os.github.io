@@ -75,11 +75,11 @@ hidden: true
      and below the navigation. */
   .corner-neuron.tr {
     left: calc(100% - 26px);
-    top: 400px;
+    top: 340px;
     width: auto;
     height: 58vh;
     transform-origin: 52.8% 61.6%;
-    transform: translate(-52.8%, -61.6%) rotate(10deg);
+    transform: translate(-52.8%, -61.6%) rotate(15deg);
   }
 
   #title-canvas {
@@ -441,7 +441,7 @@ hidden: true
     }
 
     .corner-neuron.tr {
-      top: 250px;
+      top: 225px;
       height: 28vh;
     }
 
